@@ -9,5 +9,5 @@ and highlights the problem of sparse reward setting and how it is overcome using
 strategies, and specifically touches upon Evolution Strategy algorithm and its advantages when applied to
 Reinforcement Learning problems. 
 
-<p><a href="/Algorithms for Reinforcement Learning problems.pdf">Writeup</a></p>
+<a href="/Algorithms for Reinforcement Learning problems.pdf">Writeup</a>
 
