@@ -6,6 +6,6 @@ title: Data Science Projects
 	<ul class="projects">
 
 	  {% for project in site.projects %}
-	    <li><span>{{ project.date | date_to_string }}</span> » <a href="{{ project.url }}" title="{{ project.title }}">{{ project.title }}</a></li>
+	    <li><a href="{{ project.url }}" title="{{ project.title }}">{{ project.title }}</a></li>
 	  {% endfor %}
 	</ul>
