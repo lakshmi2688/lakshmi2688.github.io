@@ -43,6 +43,9 @@ ul.posts {
 }
 
 ul.posts li {
-    list-style: none;
+    <!--list-style: none;-->
+    font-size: 1.5em;
+    line-height: 1.4em;
+    color: #333;
 }
 
