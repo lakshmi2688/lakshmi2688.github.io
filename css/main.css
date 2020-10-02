@@ -43,9 +43,7 @@ ul.posts {
 }
 
 ul.posts li {
-    list-style: disc;
+    margin: 20px auto 40px; 
     font-size: 1.5em;
-    line-height: 1.4em;
-    color: #333;
 }
 
