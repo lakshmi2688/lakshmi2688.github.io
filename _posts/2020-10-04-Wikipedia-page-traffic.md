@@ -21,7 +21,7 @@ We combine the data from two different API endpoints, the Legacy Pagecounts API 
  <a href="https://wikimedia.org/api/rest_v1/#/Pagecounts_data_(legacy)/get_metrics_legacy_pagecounts_aggregate_project_access_site_granularity_start_end">End point</a></li>
 
  <li>The Pageviews API (documentation and endpoint links below) provides access to desktop, mobile web, and mobile app traffic data from July 2015 through last month. 
- <a href="https://wikitech.wikimedia.org/wiki/Analytics/AQS/Pageviews">Pageviews API documentation</a></p>
+ <a href="https://wikitech.wikimedia.org/wiki/Analytics/AQS/Pageviews">Pageviews API documentation</a>
  <a href="https://wikimedia.org/api/rest_v1/#/Pageviews_data/get_metrics_pageviews_aggregate_project_access_agent_granularity_start_end">Endpoint</a></li></ul>
 
 
