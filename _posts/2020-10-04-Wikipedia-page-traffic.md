@@ -39,5 +39,5 @@ https://wikitech.wikimedia.org/wiki/Analytics/AQS/Pageviews https://wikimedia.or
 <p>Data from the Pageview API excludes spiders/crawlers, while data from the Pagecounts API does not</p>
 
 <h5><strong>Links to artifacts</strong></h5>
-<a href="">Code link</a>
-<a href="">Time series plot</a>
+<a href="/Wikipedia_traffic_analysis.html">Code link</a>
+<a href="Wikipedia_traffic_plot.jpg">Time series plot</a>
