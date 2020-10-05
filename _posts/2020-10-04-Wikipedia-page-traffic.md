@@ -40,6 +40,6 @@ We combine the data from two different API endpoints, the Legacy Pagecounts API 
 <h3><strong>Known issues/considerations</strong></h3>
 <p>Data from the Pageview API excludes spiders/crawlers, while data from the Pagecounts API does not</p>
 
-<h5><strong>Links to artifacts</strong></h5>
+<h3><strong>Links to artifacts</strong></h3>
 <ul><li><a href="/Wikipedia_traffic_analysis.html">Code link</a></li>
  <li><a href="Wikipedia_traffic_plot.jpg">Time series plot</a></li></ul>
