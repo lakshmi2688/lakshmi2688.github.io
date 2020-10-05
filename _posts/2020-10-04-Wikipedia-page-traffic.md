@@ -17,12 +17,12 @@ We combine the data from two different API endpoints, the Legacy Pagecounts API 
 <p>In order to measure Wikipedia traffic from 2008-2020, you will need to collect data from two different API endpoints, the Legacy Pagecounts API and the Pageviews API.</p>
 
 <ul><li>The Legacy Pagecounts API (documentation and endpoint links below) provides access to desktop and mobile traffic data from December 2007 through July 2016.
- <p><a href="https://wikitech.wikimedia.org/wiki/Analytics/AQS/Legacy_Pagecounts">Pagecounts API documentation</a></p>
-  <p><a href="https://wikimedia.org/api/rest_v1/#/Pagecounts_data_(legacy)/get_metrics_legacy_pagecounts_aggregate_project_access_site_granularity_start_end>End point</a></p>
+ <a href="https://wikitech.wikimedia.org/wiki/Analytics/AQS/Legacy_Pagecounts">Pagecounts API documentation</a>
+ <a href="https://wikimedia.org/api/rest_v1/#/Pagecounts_data_(legacy)/get_metrics_legacy_pagecounts_aggregate_project_access_site_granularity_start_end">End point</a></li>
 
  <li>The Pageviews API (documentation and endpoint links below) provides access to desktop, mobile web, and mobile app traffic data from July 2015 through last month. 
- <p><a href="https://wikitech.wikimedia.org/wiki/Analytics/AQS/Pageviews>Pageviews API documentation</a></p>
- <p><a href="https://wikimedia.org/api/rest_v1/#/Pageviews_data/get_metrics_pageviews_aggregate_project_access_agent_granularity_start_end</a></p></ul>
+ <a href="https://wikitech.wikimedia.org/wiki/Analytics/AQS/Pageviews">Pageviews API documentation</a></p>
+ <a href="https://wikimedia.org/api/rest_v1/#/Pageviews_data/get_metrics_pageviews_aggregate_project_access_agent_granularity_start_end"</a></li></ul>
 
 
 <h3><strong>Description of fields in the data file en-wikipedia_traffic_200712-202008.csv</strong></h3>
@@ -34,7 +34,7 @@ We combine the data from two different API endpoints, the Legacy Pagecounts API 
 <li>pagecount_mobile_views	- number of views from pagecount API that has combined traffic from mobile only </li>
 <li>pageview_all_views	- number of views from pageview API that has combined traffic from mobile and desktop </li>
 <li>pageview_desktop_views - number of views from pageview API that has combined traffic from desktop only</li>
-<li>pageview_mobile_views - number of views from pageview API that has combined traffic from mobile only </ul>
+<li>pageview_mobile_views - number of views from pageview API that has combined traffic from mobile only</li> </ul>
 
 
 <h3><strong>Known issues/considerations</strong></h3>
