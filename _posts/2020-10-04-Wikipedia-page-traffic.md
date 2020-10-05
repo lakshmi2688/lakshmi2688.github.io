@@ -42,4 +42,4 @@ We combine the data from two different API endpoints, the Legacy Pagecounts API 
 
 <h3><strong>Links to artifacts</strong></h3>
 <ul><li><a href="/Wikipedia_traffic_analysis.html">Code link</a></li>
- <li><a href="wikipedia_traffic_plot.jpg">Time series plot</a></li></ul>
+ <li><a href="/wikipedia_traffic_plot.jpg">Time series plot</a></li></ul>
