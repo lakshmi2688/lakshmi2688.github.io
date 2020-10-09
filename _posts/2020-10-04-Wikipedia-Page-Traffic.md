@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Wikipedia page traffic"
+title: "Wikipedia Page Traffic"
 date: 2020-10-04
 ---
 
