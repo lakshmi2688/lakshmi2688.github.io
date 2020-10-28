@@ -16,6 +16,11 @@ sample Dataset summarizes the usage behavior of about 9000 active credit card ho
 <li><strong>Second customers cluster (revolvers) </strong> who use credit card as a loan (most lucrative sector): highest balance (5000 dollars) and cash advance (~5000 dollars), low purchase frequency, high cash advance frequency (0.5), high cash advance transactions (16) and low percentage of full payment (3%)</li>
 <li><strong>Third customer cluster (VIP/Prime):</strong> high credit limit dollars 16K and highest percentage of full payment, target for increase credit limit and increase spending habits</li>
 <li><strong>Fourth customer cluster (low tenure):</strong> these are customers with low tenure (7 years), low balance</li></ul>
+
+<h3> K-means clustering </h3>
+![Principal Components](/assets/PCA.jpg)
+
+<h3> First two principal components </h3>
 ![Principal Components](/assets/PCA.jpg)
 
 <h2><strong>License of the source data </strong></h2>
