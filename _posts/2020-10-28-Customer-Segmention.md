@@ -11,10 +11,7 @@ sample Dataset summarizes the usage behavior of about 9000 active credit card ho
 <ul><li>Data includes transactions frequency, amount, tenure etc</li>
     <li>Leverage K-means clustering and PCA to do the segmentation</li></ul>
 
-![K-means Clustering](/assets/K-means.jpg)
 ![Principal Components](/assets/PCA.jpg)
-
-
 
 <h2><strong>License of the source data </strong></h2>
 <p>Creative Commons Public Domain Dedication
@@ -49,5 +46,5 @@ This license is one of the open Creative Commons licenses and is like a public d
 |TENURE |Tenure of credit card service for user|
 
 <h2><strong>Links to artifacts</strong></h2>
-<ul><li><a href="/assets/">Code link</a></li>
- <li><a href="/assets/wikipedia_traffic_plot.jpg">Time series plot</a></li></ul>
+<ul><li><a href="/assets/Credit_Card_Customer_Segmentation.ipynb">Code link</a></li>
+</ul>
