@@ -10,12 +10,12 @@ sample Dataset summarizes the usage behavior of about 9000 active credit card ho
 
 <ul><li>Data includes transactions frequency, amount, tenure etc</li>
     <li>Leverage K-means clustering and PCA to do the segmentation</li></ul>
-    
+
+<h2><strong> Analysis</strong></h2>
 <ul><li><strong>First Customers cluster (Transactors): </strong>Those are customers who pay least amount of interest charges and careful with their money, Cluster with lowest balance (105 dollars) and cash advance (308 dollars), Percentage of full payment = 23%</li>
 <li><strong>Second customers cluster (revolvers) </strong> who use credit card as a loan (most lucrative sector): highest balance (5000 dollars) and cash advance (~5000 dollars), low purchase frequency, high cash advance frequency (0.5), high cash advance transactions (16) and low percentage of full payment (3%)</li>
 <li><strong>Third customer cluster (VIP/Prime):</strong> high credit limit dollars 16K and highest percentage of full payment, target for increase credit limit and increase spending habits</li>
 <li><strong>Fourth customer cluster (low tenure):</strong> these are customers with low tenure (7 years), low balance</li></ul>
-
 ![Principal Components](/assets/PCA.jpg)
 
 <h2><strong>License of the source data </strong></h2>
