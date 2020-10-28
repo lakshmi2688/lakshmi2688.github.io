@@ -18,10 +18,12 @@ sample Dataset summarizes the usage behavior of about 9000 active credit card ho
 <li><strong>Fourth customer cluster (low tenure):</strong> these are customers with low tenure (7 years), low balance</li></ul>
 
 <h3> K-means clustering </h3>
-![Principal Components](/assets/PCA.jpg)
+
+![K-means clustering](/assets/K-means.jpg)
 
 <h3> First two principal components </h3>
-![Principal Components](/assets/PCA.jpg)
+
+![First two Principal Components](/assets/PCA.jpg)
 
 <h2><strong>License of the source data </strong></h2>
 <p>Creative Commons Public Domain Dedication
