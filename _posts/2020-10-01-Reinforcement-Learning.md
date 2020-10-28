@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Reinforcement Learning"
+title: "Reinforcement Learning writeup"
 date: 2020-10-01
 ---
 
