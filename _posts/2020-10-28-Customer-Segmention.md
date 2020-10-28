@@ -11,8 +11,8 @@ sample Dataset summarizes the usage behavior of about 9000 active credit card ho
 <ul><li>Data includes transactions frequency, amount, tenure etc</li>
     <li>Leverage K-means clustering and PCA to do the segmentation</li></ul>
 
-![K-means Clustering](/assests/K-means.jpg)
-![Principal Components](/assests/PCA.jpg)
+![K-means Clustering](/assets/K-means.jpg)
+![Principal Components](/assets/PCA.jpg)
 
 
 
