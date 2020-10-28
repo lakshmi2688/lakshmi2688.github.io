@@ -12,8 +12,8 @@ sample Dataset summarizes the usage behavior of about 9000 active credit card ho
     <li>Leverage K-means clustering and PCA to do the segmentation</li></ul>
 
 
-![K-means Clustering](attachment:/assets/K-means.jpg)
-![Principal Components](attachment:/assets/PCA.jpg)
+![K-means Clustering](attachment:K-means.jpg)
+![Principal Components](attachment:PCA.jpg)
 
 
 <h2><strong>License of the source data </strong></h2>
@@ -30,26 +30,23 @@ This license is one of the open Creative Commons licenses and is like a public d
 | Columns | Description | 
 | :------------- | :----------  | 
 |CUSTID : |Identification of Credit Card holder (Categorical)|
-|BALANCE : Balance amount left in their account to make purchases|  
-|BALANCEFREQUENCY : |How frequently the Balance is updated, score between 0 and 1 (1 = frequently updated, 0 = not frequently updated)|
+|BALANCE :| Balance amount left in their account to make purchases|  
+|BALANCE FREQUENCY : |How frequently the Balance is updated, score between 0 and 1 (1 = frequently updated, 0 = not frequently updated)|
 |PURCHASES : |Amount of purchases made from account|
-|ONEOFFPURCHASES : |Maximum purchase amount done in one-go|
-|INSTALLMENTSPURCHASES : |Amount of purchase done in installment|
-|CASHADVANCE : |Cash in advance given by the user|
-|PURCHASESFREQUENCY : |How frequently the Purchases are being made, score between 0 and 1 (1 = frequently purchased, 0 = not frequently purchased)|
-|ONEOFFPURCHASESFREQUENCY : |How frequently Purchases are happening in one-go (1 = frequently purchased, 0 = not frequently purchased)|
-|PURCHASESINSTALLMENTSFREQUENCY : |How frequently purchases in installments are being done (1 = frequently done, 0 = not frequently done)|
-|CASHADVANCEFREQUENCY : |How frequently the cash in advance being paid|
-|CASHADVANCETRX : |Number of Transactions made with "Cash in Advanced"|
-|PURCHASESTRX : |Number of purchase transactions made|
-|CREDITLIMIT : |Limit of Credit Card for user|
+|ONE OFF PURCHASES : |Maximum purchase amount done in one-go|
+|INSTALLMENT PURCHASES : |Amount of purchase done in installment|
+|CASH ADVANCE : |Cash in advance given by the user|
+|PURCHASES FREQUENCY : |How frequently the Purchases are being made, score between 0 and 1 (1 = frequently purchased, 0 = not frequently purchased)|
+|ONEOFF PURCHASES FREQUENCY : |How frequently Purchases are happening in one-go (1 = frequently purchased, 0 = not frequently purchased)|
+|PURCHASES INSTALLMENT FREQUENCY : |How frequently purchases in installments are being done (1 = frequently done, 0 = not frequently done)|
+|CASH ADVANCE FREQUENCY : |How frequently the cash in advance being paid|
+|CASH ADVANCE TRX : |Number of Transactions made with "Cash in Advanced"|
+|PURCHASES TRX : |Number of purchase transactions made|
+|CREDIT LIMIT : |Limit of Credit Card for user|
 |PAYMENTS : |Amount of Payment done by user|
 |MINIMUM_PAYMENTS :| Minimum amount of payments made by user|
-|PRCFULLPAYMENT : |Percent of full payment paid by user|
+|PRC FULL PAYMENT : |Percent of full payment paid by user|
 |TENURE : |Tenure of credit card service for user|
-
-<h2><strong>Known issues/considerations</strong></h2>
-<p>Data from the Pageview API excludes spiders/crawlers, while data from the Pagecounts API does not</p>
 
 <h2><strong>Links to artifacts</strong></h2>
 <ul><li><a href="/Wikipedia_traffic_analysis.html">Code link</a></li>
