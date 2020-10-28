@@ -12,11 +12,12 @@ sample Dataset summarizes the usage behavior of about 9000 active credit card ho
     <li>Leverage K-means clustering and PCA to do the segmentation</li></ul>
 
 
-<img src="/assests/K-means.jpg"
+<img src="href="/assests/PCA.jpg"
      alt="K-means Clustering"
      style="float: left; margin-right: 10px;" />
 ![K-means Clustering](attachment:K-means.jpg)
-![Principal Components](attachment:PCA.jpg)
+![Principal Components](attachment:/assests/PCA.jpg)
+
 
 
 <h2><strong>License of the source data </strong></h2>
