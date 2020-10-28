@@ -15,8 +15,8 @@ sample Dataset summarizes the usage behavior of about 9000 active credit card ho
 <img src="/assests/PCA.jpg"
      alt="K-means Clustering"
      style="float: left; margin-right: 10px;" />
-![K-means Clustering](attachment:K-means.jpg)
-![Principal Components](attachment:/assests/PCA.jpg)
+![K-means Clustering](/assests/K-means.jpg)
+![Principal Components](/assests/PCA.jpg)
 
 
 
