@@ -46,7 +46,7 @@ This license is one of the open Creative Commons licenses and is like a public d
 |PAYMENTS : |Amount of Payment done by user|
 |MINIMUM_PAYMENTS :| Minimum amount of payments made by user|
 |PRCFULLPAYMENT : |Percent of full payment paid by user|
-|TENURE : |Tenure of credit card service for user
+|TENURE : |Tenure of credit card service for user|
 
 <h2><strong>Known issues/considerations</strong></h2>
 <p>Data from the Pageview API excludes spiders/crawlers, while data from the Pagecounts API does not</p>
