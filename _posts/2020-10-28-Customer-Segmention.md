@@ -20,7 +20,6 @@ This license is one of the open Creative Commons licenses and is like a public d
 
 <h2><strong>Links :</strong></h2>
  <a href="https://www.kaggle.com/arjunbhasin2013/ccdata">Kaggle credit card dataset for clustering</a>
-
  
 <h2><strong>Data Dictionary for Credit Card dataset</strong></h2>
 
@@ -46,5 +45,4 @@ This license is one of the open Creative Commons licenses and is like a public d
 |TENURE |Tenure of credit card service for user|
 
 <h2><strong>Links to artifacts</strong></h2>
-<ul><li><a href="/assets/Credit_Card_Customer_Segmentation.ipynb">Code link</a></li>
-</ul>
+<a href="/assets/Credit_Card_Customer_Segmentation.ipynb">Code link</a>
