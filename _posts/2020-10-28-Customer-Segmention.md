@@ -17,7 +17,7 @@ sample Dataset summarizes the usage behavior of about 9000 active credit card ho
 <li><strong>Third customer cluster (VIP/Prime):</strong> high credit limit dollars 16K and highest percentage of full payment, target for increase credit limit and increase spending habits</li>
 <li><strong>Fourth customer cluster (low tenure):</strong> these are customers with low tenure (7 years), low balance</li></ul>
 
-<h3> K-means clustering </h3>
+<h2> K-means clustering </h2>
 
 ![K-means clustering](/assets/Kmeans-BALANCE.jpg)
 ![K-means clustering](/assets/Kmeans-CASH_ADVANCE.jpg)
@@ -25,7 +25,7 @@ sample Dataset summarizes the usage behavior of about 9000 active credit card ho
 ![K-means clustering](/assets/Kmeans-PAYMENTS.jpg)
 ![K-means clustering](/assets/Kmeans-PURCHASES_FREQUENCY.jpg)
 
-<h3> First two principal components </h3>
+<h2> First two principal components </h2>
 
 ![First two Principal Components](/assets/PCA.jpg)
 
