@@ -23,6 +23,7 @@ sample Dataset summarizes the usage behavior of about 9000 active credit card ho
 ![K-means clustering](/assets/Kmeans-CASH_ADVANCE.jpg)
 ![K-means clustering](/assets/Kmeans-TENURE.jpg)
 ![K-means clustering](/assets/Kmeans-PAYMENTS.jpg)
+![K-means clustering](/assets/Kmeans-PURCHASES_FREQUENCY.jpg)
 
 <h3> First two principal components </h3>
 
