@@ -8,6 +8,7 @@ date: 2020-10-04
 <p>The goal of this project is to construct, analyze, and publish a dataset of monthly traffic on English Wikipedia from January 1 2008 through August 30 2020.
 We combine the data from two different API endpoints, the Legacy Pagecounts API and the Pageviews API and perform analysis of the combined data by plotting a time series plot.</p>
 
+![Wikipedia Time Series plot](/wikipedia_traffic_plot.jpg)
 
 <h2><strong>License of the source data </strong></h2>
 <p>Unless otherwise specified in the endpoint documentation below, content accessed via the 2 APIS is licensed under the CC-BY-SA 3.0 and GFDL licenses, and you irrevocably agree to release modifications or additions made through this API under these licenses. More details are available in the link to the Wikimedia Foundation REST API terms of use: </p>
@@ -42,4 +43,3 @@ We combine the data from two different API endpoints, the Legacy Pagecounts API 
 
 <h2><strong>Links to artifacts</strong></h2>
 <ul><li><a href="/Wikipedia_traffic_analysis.html">Code link</a></li>
- <li><a href="/wikipedia_traffic_plot.jpg">Time series plot</a></li></ul>
