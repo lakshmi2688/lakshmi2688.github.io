@@ -41,24 +41,24 @@ This license is one of the open Creative Commons licenses and is like a public d
 
 | COLUMNS | DESCRIPTION | 
 | :------------- | :----------  | 
-|CUSTID  |Identification of Credit Card holder (Categorical)|
-|BALANCE | Balance amount left in their account to make purchases|  
-|BALANCE FREQUENCY |How frequently the Balance is updated, score between 0 and 1 (1 = frequently updated, 0 = not frequently updated)|
-|PURCHASES |Amount of purchases made from account|
-|ONE OFF PURCHASES |Maximum purchase amount done in one-go|
-|INSTALLMENT PURCHASES |Amount of purchase done in installment|
-|CASH ADVANCE |Cash in advance given by the user|
-|PURCHASES FREQUENCY |How frequently the Purchases are being made, score between 0 and 1 (1 = frequently purchased, 0 = not frequently purchased)|
-|ONEOFF PURCHASES FREQUENCY |How frequently Purchases are happening in one-go (1 = frequently purchased, 0 = not frequently purchased)|
-|PURCHASES INSTALLMENT FREQUENCY |How frequently purchases in installments are being done (1 = frequently done, 0 = not frequently done)|
-|CASH ADVANCE FREQUENCY |How frequently the cash in advance being paid|
-|CASH ADVANCE TRX |Number of Transactions made with "Cash in Advanced"|
-|PURCHASES TRX |Number of purchase transactions made|
-|CREDIT LIMIT |Limit of Credit Card for user|
-|PAYMENTS |Amount of Payment done by user|
-|MINIMUM_PAYMENTS | Minimum amount of payments made by user|
-|PRC FULL PAYMENT |Percent of full payment paid by user|
-|TENURE |Tenure of credit card service for user|
+| CUSTID  | Identification of Credit Card holder (Categorical) |
+| BALANCE | Balance amount left in their account to make purchases |  
+| BALANCE FREQUENCY | How frequently the Balance is updated, score between 0 and 1 (1 = frequently updated, 0 = not frequently updated) |
+| PURCHASES | Amount of purchases made from account |
+| ONE OFF PURCHASES | Maximum purchase amount done in one-go |
+| INSTALLMENT PURCHASES | Amount of purchase done in installment |
+| CASH ADVANCE | Cash in advance given by the user |
+| PURCHASES FREQUENCY | How frequently the Purchases are being made, score between 0 and 1 (1 = frequently purchased, 0 = not frequently purchased) |
+| ONEOFF PURCHASES FREQUENCY | How frequently Purchases are happening in one-go (1 = frequently purchased, 0 = not frequently purchased) |
+| PURCHASES INSTALLMENT FREQUENCY | How frequently purchases in installments are being done (1 = frequently done, 0 = not frequently done) |
+| CASH ADVANCE FREQUENCY | How frequently the cash in advance being paid |
+| CASH ADVANCE TRX | Number of Transactions made with "Cash in Advanced" |
+|PURCHASES TRX |Number of purchase transactions made |
+|CREDIT LIMIT |Limit of Credit Card for user |
+|PAYMENTS |Amount of Payment done by user |
+|MINIMUM_PAYMENTS | Minimum amount of payments made by user |
+|PRC FULL PAYMENT |Percent of full payment paid by user |
+|TENURE |Tenure of credit card service for user |
 
 <h2><strong>Links to artifacts</strong></h2>
 <p><a href="https://github.com/lakshmi2688/lakshmi2688.github.io/blob/master/assets/Credit_Card_Customer_Segmentation.ipynb">Code link</a></p>
