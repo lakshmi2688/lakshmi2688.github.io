@@ -20,6 +20,7 @@ date: 2020-10-29
 <h2> Analysis 2 - Neural Network decision boundary </h2>
 
 ![First two Principal Components](/assets/classification/guassian_data.jpg)
+![First two Principal Components](/assets/classification/logistic_regression_decision_boundary.jpg)
 ![First two Principal Components](/assets/classification/neural_nw_decision_boundary.jpg)
 
 <h2><strong>Data Source :</strong></h2>
