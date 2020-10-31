@@ -12,16 +12,16 @@ date: 2020-10-29
 
 <h2> Analysis 1 - Logistic regression decision boundary </h2>
 
-![K-means clustering](/assets/classification/precision_recall_curve.jpg)
-![K-means clustering](/assets/classification/roc_curve.jpg)
-![K-means clustering](/assets/classification/testdata_curve.jpg)
-![K-means clustering](/assets/classification/testdata_decision_boundary.jpg)
+![precision_recall](/assets/classification/precision_recall_curve.jpg)
+![roc](/assets/classification/roc_curve.jpg)
+![K-means clustering](/assets/classification/Ad_data.jpg)
+![K-means clustering](/assets/classification/logistic_reg_decision_boundary.jpg)
 
 <h2> Analysis 2 - Neural Network decision boundary </h2>
 
-![First two Principal Components](/assets/classification/guassian_data.jpg)
-![First two Principal Components](/assets/classification/logistic_regression_decision_boundary.jpg)
-![First two Principal Components](/assets/classification/neural_nw_decision_boundary.jpg)
+![Guassian Data](/assets/classification/guassian_data.jpg)
+![Logistic regression](/assets/classification/logistic_regression_decision_boundary.jpg)
+![Neural Network](/assets/classification/neural_nw_decision_boundary.jpg)
 
 <h2><strong>Data Source :</strong></h2>
  <a href="https://www.kaggle.com/fayomi/advertising">Advertising dataset from Kaggle</a>
