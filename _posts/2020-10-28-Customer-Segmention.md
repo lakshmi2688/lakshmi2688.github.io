@@ -19,22 +19,22 @@ sample Dataset summarizes the usage behavior of about 9000 active credit card ho
 
 <h2> K-means clustering visuals </h2>
 
-![K-means clustering](/assets/Kmeans-BALANCE.jpg)
-![K-means clustering](/assets/Kmeans-CASH_ADVANCE.jpg)
-![K-means clustering](/assets/Kmeans-TENURE.jpg)
-![K-means clustering](/assets/Kmeans-PAYMENTS.jpg)
-![K-means clustering](/assets/Kmeans-PURCHASES_FREQUENCY.jpg)
+![K-means clustering](/assets/Clustering/Kmeans-BALANCE.jpg)
+![K-means clustering](/assets/Clustering/Kmeans-CASH_ADVANCE.jpg)
+![K-means clustering](/assets/Clustering/Kmeans-TENURE.jpg)
+![K-means clustering](/assets/Clustering/Kmeans-PAYMENTS.jpg)
+![K-means clustering](/assets/Clustering/Kmeans-PURCHASES_FREQUENCY.jpg)
 
 <h2> First two principal components visuals </h2>
 
-![First two Principal Components](/assets/PCA.jpg)
+![First two Principal Components](/assets/Clustering/PCA.jpg)
 
 <h2><strong>License of the source data </strong></h2>
 <p>Creative Commons Public Domain Dedication
 This license is one of the open Creative Commons licenses and is like a public domain dedication. It allows you, as a dataset owner, to use a license mechanism to surrender your rights in a dataset when you might not otherwise be able to dedicate your dataset to the public domain under applicable law.</p>
 <a href="https://creativecommons.org/publicdomain/zero/1.0/">cc0: Public Domain</a> 
 
-<h2><strong>Links :</strong></h2>
+<h2><strong>Data Source :</strong></h2>
  <a href="https://www.kaggle.com/arjunbhasin2013/ccdata">Kaggle credit card dataset for clustering</a>
  
 <h2><strong>Data Dictionary for Credit Card dataset</strong></h2>
@@ -61,5 +61,5 @@ This license is one of the open Creative Commons licenses and is like a public d
 |TENURE |Tenure of credit card service for user |
 
 <h2><strong>Links to artifacts</strong></h2>
-<p><a href="https://github.com/lakshmi2688/lakshmi2688.github.io/blob/master/assets/Credit_Card_Customer_Segmentation.ipynb">Code link</a></p>
+<p><a href="/assets/Clustering/Credit_Card_Customer_Segmentation.ipynb">Code link</a></p>
 
