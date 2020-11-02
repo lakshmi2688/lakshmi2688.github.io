@@ -61,5 +61,5 @@ This license is one of the open Creative Commons licenses and is like a public d
 |TENURE |Tenure of credit card service for user |
 
 <h2><strong>Links to artifacts</strong></h2>
-<p><a href="/assets/Clustering/Credit_Card_Customer_Segmentation.ipynb">Code link</a></p>
+<p><a href="https://github.com/lakshmi2688/lakshmi2688.github.io/blob/master/assets/Clustering/Credit_Card_Customer_Segmentation.ipynb">Code link</a></p>
 
