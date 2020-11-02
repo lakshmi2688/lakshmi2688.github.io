@@ -28,7 +28,7 @@ date: 2020-10-29
  
 <h2><strong>Links to artifacts</strong></h2>
 <ul>
-<li><a href='/assets/classification/planar_utils.py'>Utility file</a></li>
+<li><a href='https://github.com/lakshmi2688/lakshmi2688.github.io/blob/master/assets/classification/planar_utils.py'>Utility file</a></li>
 <li><a href="https://github.com/lakshmi2688/lakshmi2688.github.io/blob/master/assets/classification/Binary_Classification.ipynb">Code link</a></li>
 </ul>
 
