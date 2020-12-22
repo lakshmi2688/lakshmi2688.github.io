@@ -5,7 +5,6 @@ date: 2020-12-14
 ---
 
 
-
 <h1>Analysis of COVID impact on US households</h1>
 
 <p>Lakshmi Venkatasubramanian </p>
@@ -76,8 +75,8 @@ date: 2020-12-14
 <ul><li>For <strong>question 1</strong>, Logistic regression has been used as the response indicator variables are binary in nature, all the data points are independent and the sample size is large enough. Also, chi's square test of independence has been used to compare 2 categorical varaibles which is the case here. Overall likelihood ratio test has been used to verify if the full model that includes gender, race/ethnicity tell us more about the outcome (or response) variable than a model that does not include these 2 variables. </li>
 
 <p align="left" width="100%">
-    <img width="40%" src="/assets/pictures/CovidImpactByGender.jpg"> 
-    <img width="40%" src="/assets/pictures/CovidImpactByRaceEthnicity.jpg"> 
+    <img width="40%" src="https://github.com/lakshmi2688/COVID_Impact_on_US_Households/tree/master/assets/pictures/CovidImpactByGender.jpg"> 
+    <img width="40%" src="https://github.com/lakshmi2688/COVID_Impact_on_US_Households/tree/master/assets/pictures/CovidImpactByRaceEthnicity.jpg"> 
 </p>
     
 <p></p>
@@ -85,23 +84,23 @@ date: 2020-12-14
 <p></p>
 
 <p align="left" width="100%">
-    <img width="60%" src="/assets/pictures/AnxietyByRaceAndGender.jpg"> 
-    <img width="60%" src="/assets/pictures/AnxietyByAgeAndIncome.jpg"> 
-    <img width="40%" src="/assets/pictures/SelectedMentalIndicators.jpg">
+    <img width="60%" src="https://github.com/lakshmi2688/COVID_Impact_on_US_Households/tree/master/assets/pictures/AnxietyByRaceAndGender.jpg"> 
+    <img width="60%" src="https://github.com/lakshmi2688/COVID_Impact_on_US_Households/tree/master/assets/pictures/AnxietyByAgeAndIncome.jpg"> 
+    <img width="40%" src="https://github.com/lakshmi2688/COVID_Impact_on_US_Households/tree/master/assets/pictures/SelectedMentalIndicators.jpg">
 </p>
 
 <p></p>
 <li>For <strong>question 3</strong>, Logistic regression has been used as the response indicator variables are binary in nature, all the data points are independent and the sample size is large enough. Also, chi's square test of independence has been used to compare 2 categorical variables which is the case here. Overall likelihood ratio test has been used to verify if the full model that includes state tell us more about the outcome (or response) variable than a model that does not include this variable</li>
 
 <p align="left" width="100%">
-    <img width="40%" src="/assets/pictures/CovidImpactByState.jpg"> 
+    <img width="40%" src="https://github.com/lakshmi2688/COVID_Impact_on_US_Households/tree/master/assets/pictures/CovidImpactByState.jpg"> 
 </p>
 
 <p></p>
 <li>For <strong>question 4</strong>, Principal component Analysis and K-means clustering have been used to identify any patterns and classify groups of people based on similar characteristics</li>
 
 <p align="left" width="100%">
-    <img width="40%" src="/assets/pictures/PCA.jpg"> 
+    <img width="40%" src="https://github.com/lakshmi2688/COVID_Impact_on_US_Households/tree/master/assets/pictures/PCA.jpg"> 
 </p>
 
 <p></p>
@@ -164,3 +163,7 @@ The following Python packages were used and their documentation can be found at 
 
 <h3>Unknowns and dependencies</h3>
 <p>These data are experimental and samples may not be representative of the population. </p>
+
+
+<h3>Link to source code in Github</h3> 
+<a href= "https://github.com/lakshmi2688/COVID_Impact_on_US_Households/tree/master">Source code</a>
