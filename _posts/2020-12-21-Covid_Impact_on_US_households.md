@@ -27,34 +27,6 @@ date: 2020-12-14
 <p>The Census Bureau is committed to open government by sharing its public data as open data. Census data continues to be a key national resource, serving as a fuel for entrepreneurship and innovation, scientific discovery, and commercial activity.  We continuously identify and publish datasets and Application Programming Interface’s (API’s) to Data.gov in accordance with the Office of Management and Budget (OMB) Memorandum M-10-06, the Executive Order 13642 on open data, and the overall principles outlined in the Digital Government Strategy.  In
  accordance with the Open Data Policy, M-13-13, the Census Bureau publishes its information in machine-readable formats while also safeguarding privacy and security.</p>
 
-<h3>Repository structure</h3>
-
-```
-├── README.md
-├── LICENSE
-├── assets
-│   └── pictures
-├── clean_data
-│   ├── covid_clean_data.csv
-├── data_dictionary
-│   ├── pulse2020_data_dictionary.xlsx
-├── sample_raw_data
-│   └── pulse2020_raw_data.csv
-└── src
-    ├── analysis.ipynb
-    ├── data_cleaning.ipynb
-```
-
-| File       | Description    |
-| :------------- | :----------  | 
-|LICENSE | Code license |
-|README.md | This readme |
-|assets/pictures/ | Directory containing the various images displayed in the analysis notebook |
-|clean_data/covid_clean_data.csv | CSV file containing a cleaned version of covid dataset. This has the data of all the 12 weekly files cleaned up. This file is used as input to analysis.ipynb file |
-|data_dictionary/pulse2020_data_dictionary.xlsx | Data dictionary for all 12 weeks of raw data downloaded from the url |
-|sample_raw_data/pulse2020_raw_data.csv | Sample data obtained by parsing week 1 survey data from the census url that can be used as the input to data_cleaning.ipynb|
-|src/analysis.ipynb | Contains the report and analysis code/visualizations and takes the input covid_clean_data.csv which is the output of data_cleaning.ipynb |
-|src/data_cleaning.ipynb| Contains the logic to clean all the 12 weeks of data downloaded directly from the url|
 
 <h3>Research Questions</h3>
 <ul>
@@ -66,12 +38,7 @@ date: 2020-12-14
 
 <h3>Methodology</h3>
 <ul><li>For <strong>question 1</strong>, Logistic regression has been used as the response indicator variables are binary in nature, all the data points are independent and the sample size is large enough. Also, chi's square test of independence has been used to compare 2 categorical varaibles which is the case here. Overall likelihood ratio test has been used to verify if the full model that includes gender, race/ethnicity tell us more about the outcome (or response) variable than a model that does not include these 2 variables. </li>
-
-<p align="left" width="100%">
-    <img width="40%" src="https://github.com/lakshmi2688/COVID_Impact_on_US_Households/tree/master/assets/pictures/CovidImpactByGender.jpg"> 
-    <img width="40%" src="https://github.com/lakshmi2688/COVID_Impact_on_US_Households/tree/master/assets/pictures/CovidImpactByRaceEthnicity.jpg"> 
-</p>
-    
+   
 <p></p>
 <li>For <strong>question 2</strong> , ordinal logistic regression has been used because the response variable is categorical and ordered in nature, all the data points are independent and the sample size is large enough. Also, chi's square test of independence has been used to compare 2 categorical variables which is the case here.  We also used Random features feature importance to identify the top 10 features impacting Anxiety/depression.  Overall likelihood ratio test has been used to verify if the full model that includes the predictors in question namely gender, worry, interest, income loss, food insufficiency, Age group, number of household members, income level, health status, race/ethnicity tell us more about Anxiety/depression than a model that does not include these variables. </li>
 <p></p>
