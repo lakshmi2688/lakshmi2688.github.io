@@ -5,6 +5,7 @@ date: 2020-12-14
 ---
 
 
+
 <h1>Analysis of COVID impact on US households</h1>
 
 <p>Lakshmi Venkatasubramanian </p>
@@ -163,7 +164,3 @@ The following Python packages were used and their documentation can be found at 
 
 <h3>Unknowns and dependencies</h3>
 <p>These data are experimental and samples may not be representative of the population. </p>
-
-
-
-
