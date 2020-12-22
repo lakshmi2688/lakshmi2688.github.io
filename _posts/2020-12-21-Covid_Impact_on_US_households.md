@@ -1,14 +1,8 @@
 ---
 layout: post
-title: "COVID Impact on US households"
+title: "Analysis of COVID impact on US households"
 date: 2020-12-14
 ---
-
-
-<h1>Analysis of COVID impact on US households</h1>
-
-<p>Lakshmi Venkatasubramanian </p>
-<p>12/14/2020</p>
 
 <h3>Abstract</h3> 
 <p>The goal of this analysis is to gauge the impact of the pandemic on overall household characteristics such as employment status, housing, education disruptions, and dimensions of physical and mental wellness. There is a large amount of emotionally negative stimuli related to the COVID-19 pandemic. How do people prepare themselves in difficult times like this? Analyzing and exploring people's response to pandemic can provide useful insights into people's perspective about COVID and the challenges they face.</p>
