@@ -76,86 +76,14 @@ date: 2020-12-14
 <li>For <strong>question 2</strong> , ordinal logistic regression has been used because the response variable is categorical and ordered in nature, all the data points are independent and the sample size is large enough. Also, chi's square test of independence has been used to compare 2 categorical variables which is the case here.  We also used Random features feature importance to identify the top 10 features impacting Anxiety/depression.  Overall likelihood ratio test has been used to verify if the full model that includes the predictors in question namely gender, worry, interest, income loss, food insufficiency, Age group, number of household members, income level, health status, race/ethnicity tell us more about Anxiety/depression than a model that does not include these variables. </li>
 <p></p>
 
-<p align="left" width="100%">
-    <img width="60%" src="https://github.com/lakshmi2688/COVID_Impact_on_US_Households/tree/master/assets/pictures/AnxietyByRaceAndGender.jpg"> 
-    <img width="60%" src="https://github.com/lakshmi2688/COVID_Impact_on_US_Households/tree/master/assets/pictures/AnxietyByAgeAndIncome.jpg"> 
-    <img width="40%" src="https://github.com/lakshmi2688/COVID_Impact_on_US_Households/tree/master/assets/pictures/SelectedMentalIndicators.jpg">
-</p>
-
 <p></p>
 <li>For <strong>question 3</strong>, Logistic regression has been used as the response indicator variables are binary in nature, all the data points are independent and the sample size is large enough. Also, chi's square test of independence has been used to compare 2 categorical variables which is the case here. Overall likelihood ratio test has been used to verify if the full model that includes state tell us more about the outcome (or response) variable than a model that does not include this variable</li>
-
-<p align="left" width="100%">
-    <img width="40%" src="https://github.com/lakshmi2688/COVID_Impact_on_US_Households/tree/master/assets/pictures/CovidImpactByState.jpg"> 
-</p>
 
 <p></p>
 <li>For <strong>question 4</strong>, Principal component Analysis and K-means clustering have been used to identify any patterns and classify groups of people based on similar characteristics</li>
 
-<p align="left" width="100%">
-    <img width="40%" src="https://github.com/lakshmi2688/COVID_Impact_on_US_Households/tree/master/assets/pictures/PCA.jpg"> 
-</p>
-
 <p></p>
 <li><strong>Results: </strong>The results will be presented as intepretation of coefficients, significance of hypothesis tests and comprehensive compilation of visualizations.</li></ul>
-
-<h3>How to run the notebook</h3>
-
-<li>Install Anaconda</li>
-<li>Using a terminal or cmd, navigate to the src folder.</li>
-<li>Launch jupyter by running: jupyter notebook</li>
-<li>Select the notebook of interest. (Start at data_cleaning.ipynb for the full process or analysis.ipynb for the final report.)</li>
-
-<h3>Schema of the files created</h3>
-<p>There is one CSV file extracted and compiled as part of this analysis which is clean_data/covid_clean_data.csv. Below is its schema</p>
-
-| Columns        | Description    | Data type |
-| :------------- | :----------  | :----------  |
-| WEEK | Wee k of the survey | numeric |
-| EGENDER   | The gender of the respondent. Takes a value in {'MALE', 'FEMALE'}. | string| 
-| THHLD_NUMPER | The number of members in the household. Takes a value between 1 and 10 |  numeric |
-| HLTHSTATUS  | Overall health status of the respondent. Takes on values in {'POOR', 'FAIR', 'EXCELLENT'| string |
-| WORRY | Worry level of the respondent. Takes on values in {'NONE','MODERATE','VERY HIGH'} | string |
-| INTEREST | Interest level of the respondent. Takes on values in {'NONE','MODERATE','VERY HIGH'} | string |
-| RACE_ETHNICITY | Race or Ethnicity of the respondent. Takes on values in {'Hispanic','White alone','Black alone','Asian alone','Other races'} | string |
-| EMP_STATUS | Employment status of the respondent. Takes on values in {0,1} | numeric |
-| EMPLOSSCOVID | Employment loss due to covid. Takes on values in {0,1} | numeric |
-| FOOD_INSUFF | Food insufficiency due to covid. Takes on values in {0,1} | numeric |
-| RENT_DEBT | Inability to pay the rent due to covid. Takes on values in {0,1} | numeric |
-| RENT_DEBT | Inability to pay the rent due to covid. Takes on values in {0,1} | numeric |
-| INCOMELOSS| Income loss due to covid. Takes on values in {0,1} | numeric |
-| AGE_GROUP | Age group of the respondent. Takes on values in {'18 - 24','25 - 39','40 - 54','55 - 64','65 and above'} | string |
-| EDUC | Worry level of the respondent. Takes on values in {'Less than a high school diploma','High school diploma or GED','Some college/associate's degree','Bachelor's degree or higher'} | string |
-| INCOME_LEV | Income level of the respondent. Takes on values in {'Less than $25,000','$25,000 - $74,999','$75,000 - $149,999','$150,000 and above'} | string |
-
-
-<h3>Source of Bias</h3>
-<p> Nonsampling errors can also occur and are more likely for surveys that are implemented quickly, achieve low response rates, and rely on online response.  Nonsampling errors for the Household Pulse Survey may include:</p>
-
-<ul><li><strong>Measurement error:</strong> The respondent provides incorrect information, or an unclear survey question is misunderstood by the respondent. The Household Pulse Survey schedule offered only limited time for testing questions. </li>
-<li><strong>Coverage error: </strong>Individuals who otherwise would have been included in the survey frame were missed. The Household Pulse Survey only recruited households for which an email address or cell phone number could be identified.</li>
-<li><strong>Nonresponse error:</strong> Responses are not collected from all those in the sample or the respondent is unwilling to provide information. The response rate for the Household Pulse Survey was substantially lower than most federally sponsored surveys.</li>
-<li><strong>Processing error: </strong>Forms may be lost, data may be incorrectly keyed, coded, or recoded. The real-time dissemination of the Household Pulse Survey provided limited time to identify and fix processing errors.</li></ul>
- 
-<p>The Census Bureau employs quality control procedures to minimize these errors.  However, the potential bias due to nonsampling errors has not yet been evaluated.</p>
-
-
-<h3>Resources used</h3>
-
-This analysis was prepared using Python 3.8 running in a Jupyter Notebook environment.  
-Documentation for Python can be found here: https://docs.python.org/3.8/  
-Documentation for Jupyter Notebook can be found here: http://jupyter-notebook.readthedocs.io/en/latest/  
-
-The following Python packages were used and their documentation can be found at the accompanying links:
-
-* [pandas](https://pandas.pydata.org/)
-* [numpy](https://numpy.org/)
-* [IPython](https://ipython.org/)
-* [matplotlib](https://matplotlib.org/)
-* [seaborn](https://seaborn.pydata.org/)
-
-<h3>Unknowns and dependencies</h3>
-<p>These data are experimental and samples may not be representative of the population. </p>
 
 
 <h3>Link to source code in Github</h3> 
