@@ -42,4 +42,9 @@ We combine the data from two different API endpoints, the Legacy Pagecounts API 
 <p>Data from the Pageview API excludes spiders/crawlers, while data from the Pagecounts API does not</p>
 
 <h2><strong>Links to artifacts</strong></h2>
-<ul><li><a href="/assets/WikiTraffic/Wikipedia_traffic_analysis.html">Source Code</a></li>
+<ul>
+ <li><a href="/assets/WikiTraffic/Analysis/Wikipedia_traffic_analysis.ipynb">Source Code</a></li>
+ <li><a href="/assets/WikiTraffic/Raw Data/">Raw data files</a></li>
+ <li><a href="/assets/WikiTraffic/Clean Data/clean_data_en-wikipedia_traffic_200712-202009.xlsx">Clean data</a></li> 
+ <li><a href="/assets/WikiTraffic/LICENSE">License</a></li> 
+</ul>
