@@ -8,4 +8,4 @@ The cost of a college education is skyrocketing. It’s no surprise that student
 <ul><li>What would be the tuition fees for any 4 Year public university program in the future?</li>
 <li>Which factor influences the education cost the most – Debt_GDP or Consumer Price Index?</li></ul>
 
-<a href="/PredictEducationCosts.html">Detailed Analysis and code work</a>
+<a href="/assets/PredictEducationCosts/PredictEducationCosts.html">Detailed Analysis and code</a>
