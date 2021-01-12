@@ -45,6 +45,6 @@ We combine the data from two different API endpoints, the Legacy Pagecounts API 
 <ul>
  <li><a href="/assets/WikiTraffic/Analysis/Wikipedia_traffic_analysis.ipynb">Source Code</a></li>
  <li><a href="/assets/WikiTraffic/Raw Data/">Raw data files</a></li>
- <li><a href="/assets/WikiTraffic/Clean Data/clean_data_en-wikipedia_traffic_200712-202009.xlsx">Clean data</a></li> 
+ <li><a href="/assets/WikiTraffic/Clean Data/clean_data_en-wikipedia_traffic_200712-202009.csv">Clean data</a></li> 
  <li><a href="/assets/WikiTraffic/LICENSE">License</a></li> 
 </ul>
