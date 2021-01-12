@@ -12,24 +12,24 @@ date: 2020-10-29
 
 <h2> Analysis 1 - Logistic regression decision boundary </h2>
 
-![precision_recall](/assets/classification/precision_recall_curve.jpg)
-![roc](/assets/classification/roc_curve.jpg)
-![K-means clustering](/assets/classification/Ad_data.jpg)
-![K-means clustering](/assets/classification/logistic_reg_decision_boundary.jpg)
+![precision_recall](/assets/Classification/precision_recall_curve.jpg)
+![roc](/assets/Classification/roc_curve.jpg)
+![K-means clustering](/assets/Classification/Ad_data.jpg)
+![K-means clustering](/assets/Classification/logistic_reg_decision_boundary.jpg)
 
 <h2> Analysis 2 - Neural Network decision boundary </h2>
 
-![Guassian Data](/assets/classification/guassian_data.jpg)
-![Logistic regression](/assets/classification/logistic_regression_decision_boundary.jpg)
-![Neural Network](/assets/classification/neural_nw_decision_boundary.jpg)
+![Guassian Data](/assets/Classification/guassian_data.jpg)
+![Logistic regression](/assets/Classification/logistic_regression_decision_boundary.jpg)
+![Neural Network](/assets/Classification/neural_nw_decision_boundary.jpg)
 
 <h2><strong>Data Source :</strong></h2>
  <a href="https://www.kaggle.com/fayomi/advertising">Advertising dataset from Kaggle</a>
  
 <h2><strong>Links to artifacts</strong></h2>
 <ul>
-<li><a href='https://github.com/lakshmi2688/lakshmi2688.github.io/blob/master/assets/classification/planar_utils.py'>Utility file</a></li>
-<li><a href="https://github.com/lakshmi2688/lakshmi2688.github.io/blob/master/assets/classification/Binary_Classification.ipynb">Code link</a></li>
+<li><a href='https://github.com/lakshmi2688/lakshmi2688.github.io/blob/master/assets/Classification/planar_utils.py'>Utility file</a></li>
+<li><a href="https://github.com/lakshmi2688/lakshmi2688.github.io/blob/master/assets/Classification/Binary_Classification.ipynb">Code link</a></li>
 </ul>
 
 
