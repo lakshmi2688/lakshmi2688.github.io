@@ -14,7 +14,7 @@ date: 2021-01-14
 <p>There are currently two distinct types of data included:</p>
    <ol><li> A corpus of all 95 million user and article talk diffs made between 2001–2015 which can be scored by our personal attacks model.</li>
    <li> An annotated dataset of 1m crowd-sourced annotations that cover 100k talk page diffs (with 10 judgements per diff) for personal attacks, aggression, and toxicity.</li></ol>   
-
+   
 <h4>Analyze the personal attacks datasets and  answer some of the following questions</h4>
 <ul><li>Predict sentiments of personal attack comments using Naive Bayes</li>
     <li>Explore relationships between worker demographics and labeling behavior</li>
@@ -36,7 +36,7 @@ Wulczyn, Ellery; Thain, Nithum; Dixon, Lucas (2016): Wikipedia Detox. figshare. 
 |seaborn | 0.10.0|
 
 
-<h2><strong>Links to all relevant API documentation:</strong></h2>
+<h2><strong>Data Source:</strong></h2>
 
 <h4>Due to the large size of the datasets, these datasets can be downloaded from the below links</h4>
 <ul><li>https://figshare.com/articles/dataset/Wikipedia_Talk_Labels_Aggression/4267550</li>
