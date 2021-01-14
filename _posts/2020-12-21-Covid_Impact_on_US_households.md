@@ -54,4 +54,4 @@ date: 2020-12-14
 
 
 <h3>Link to source code in Github</h3> 
-<a href= "https://github.com/lakshmi2688/Sentiment-Analysis-and-understand-Bias-in-Data">Source code</a>
+<a href= "https://github.com/lakshmi2688/COVID_Impact_on_US_Households">Source code</a>
