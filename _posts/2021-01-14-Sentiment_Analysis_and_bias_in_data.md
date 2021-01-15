@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Sentiment analysis using Naive Bayes and analysis of Bias in data using NLP and exploratory data analysis"
+title: "Sentiment analysis and analysis of Bias in data"
 date: 2021-01-14
 ---
 
