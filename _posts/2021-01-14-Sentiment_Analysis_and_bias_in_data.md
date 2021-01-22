@@ -12,8 +12,8 @@ date: 2021-01-14
 <p>For the purpose of this analysis, we will be focusing on personal attacks dataset </p>
 
 <p>There are currently two distinct types of data included:
-   <ol><li> A corpus of all 95 million user and article talk diffs made between 2001–2015 which can be scored by our personal attacks model.</li>
-   <li> An annotated dataset of 1m crowd-sourced annotations that cover 100k talk page diffs (with 10 judgements per diff) for personal attacks, aggression, and toxicity.</li></ol>   </p>
+<ol><li> A corpus of all 95 million user and article talk diffs made between 2001–2015 which can be scored by our personal attacks model.</li>
+   <li> An annotated dataset of 1m crowd-sourced annotations that cover 100k talk page diffs (with 10 judgements per diff) for personal attacks, aggression, and toxicity.</li></ol></p>
    
 <h2>Analyze the personal attacks datasets and answer some of the following questions</h2>
 <ul><li>Predict sentiments of personal attack comments using Naive Bayes</li>
