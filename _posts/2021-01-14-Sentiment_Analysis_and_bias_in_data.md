@@ -15,14 +15,14 @@ date: 2021-01-14
    <ol><li> A corpus of all 95 million user and article talk diffs made between 2001–2015 which can be scored by our personal attacks model.</li>
    <li> An annotated dataset of 1m crowd-sourced annotations that cover 100k talk page diffs (with 10 judgements per diff) for personal attacks, aggression, and toxicity.</li></ol>   </p>
    
-<h4>Analyze the personal attacks datasets and  answer some of the following questions</h4>
+<h2>Analyze the personal attacks datasets and answer some of the following questions</h2>
 <ul><li>Predict sentiments of personal attack comments using Naive Bayes</li>
     <li>Explore relationships between worker demographics and labeling behavior</li>
     <li>How consistent are labelling behaviors among workers with different demographic profiles? For example, are female-identified labelers more or less likely to label comments as aggressive than male-identified labelers?</li>
     <li>If the labelling behaviors are different, what are some possible causes and consequences of this difference?</li></ul>
 
 
-<h3>Link to source code in Github</h3> 
+<h2>Link to source code in Github</h2> 
 <a href= "https://github.com/lakshmi2688/Sentiment-Analysis-and-understand-Bias-in-Data">Source code</a>
 
 
