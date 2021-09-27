@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Analysis of COVID impact on US households"
-date: 2020-12-14
+title: "Anomaly Detection in Bitcoin Transactions"
+date: 2021-07-05
 ---
 
 <h3>Abstract</h3> 
