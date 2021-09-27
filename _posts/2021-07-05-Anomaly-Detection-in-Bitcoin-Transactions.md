@@ -23,6 +23,7 @@ date: 2021-07-05
 ├── notebooks
 ```
 <h3>How to run the notebook</h3>
+
 * Install Anaconda
 * Using a terminal or cmd, navigate to the src folder.
 * Launch jupyter by running: jupyter notebook
