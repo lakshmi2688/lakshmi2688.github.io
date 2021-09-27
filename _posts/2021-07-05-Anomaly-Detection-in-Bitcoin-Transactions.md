@@ -13,7 +13,6 @@ date: 2021-07-05
 <p>We use this dataset to evaluate the effectiveness of anomaly detection methods to classify illicit transactions, reproduce supervised learning classification method employed in previous studies, including AL, and evaluate the performance of a modification to the AL method that uses the network graph to aid in selecting datapoints.</p>
 
 <h3>Repository structure</h3>
-
 ```
 ├── README.md
 ├── LICENSE
@@ -23,11 +22,10 @@ date: 2021-07-05
 ├── notebooks
 ```
 <h3>How to run the notebook</h3>
-
-<p><li>Install Anaconda</li>
+<li>Install Anaconda</li>
 <li>Using a terminal or cmd, navigate to the src folder.</li>
 <li>Launch jupyter by running: jupyter notebook</li>
-<li>Select the notebook of interest. (Start at data_cleaning.ipynb for the full process or analysis.ipynb for the final report.)</li></p>
+<li>Select the notebook of interest. (Start at data_cleaning.ipynb for the full process or analysis.ipynb for the final report.)</li>
 
 <h3>Resources used</h3>
 
