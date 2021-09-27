@@ -13,6 +13,7 @@ date: 2021-07-05
 <p>We use this dataset to evaluate the effectiveness of anomaly detection methods to classify illicit transactions, reproduce supervised learning classification method employed in previous studies, including AL, and evaluate the performance of a modification to the AL method that uses the network graph to aid in selecting datapoints.</p>
 
 <h3>Repository structure</h3>
+
 ```
 ├── README.md
 ├── LICENSE
