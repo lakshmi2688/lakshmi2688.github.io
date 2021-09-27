@@ -44,7 +44,7 @@ The following Python packages were used and their documentation can be found at 
 * [seaborn](https://seaborn.pydata.org/)
 
 <h3>Detailed report</h3>
-<li><a href='https://github.com/lakshmi2688/Illicit-transactions-detection-in-Bitcoin-system/blob/main/Illicit_transactions_detection_in_the_Bitcoin_blockchain.pdf'>Detailed Report</a></li>
+<a href='https://github.com/lakshmi2688/Illicit-transactions-detection-in-Bitcoin-system/blob/main/Illicit_transactions_detection_in_the_Bitcoin_blockchain.pdf'>Detailed Report</a>
 
 <h3>Link to source code in Github</h3> 
 <a href= "https://github.com/lakshmi2688/Illicit-transactions-detection-in-Bitcoin-system">Source code</a>
