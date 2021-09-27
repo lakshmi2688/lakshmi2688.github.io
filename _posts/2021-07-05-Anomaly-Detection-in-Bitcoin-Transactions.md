@@ -24,10 +24,10 @@ date: 2021-07-05
 ```
 <h3>How to run the notebook</h3>
 
-<li>Install Anaconda</li>
+<p><li>Install Anaconda</li>
 <li>Using a terminal or cmd, navigate to the src folder.</li>
 <li>Launch jupyter by running: jupyter notebook</li>
-<li>Select the notebook of interest. (Start at data_cleaning.ipynb for the full process or analysis.ipynb for the final report.)</li>
+<li>Select the notebook of interest. (Start at data_cleaning.ipynb for the full process or analysis.ipynb for the final report.)</li></p>
 
 <h3>Resources used</h3>
 
