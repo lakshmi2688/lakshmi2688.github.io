@@ -34,4 +34,4 @@ date: 2022-01-15
 
 
 <h3>Link to source code in Github</h3> 
-<a href= "https://github.com/lakshmi2688/PCA_Images">Source code</a>
+<a href= "https://github.com/lakshmi2688/PCA_Images/blob/main/PCA_Images.ipynb">Source code</a>
