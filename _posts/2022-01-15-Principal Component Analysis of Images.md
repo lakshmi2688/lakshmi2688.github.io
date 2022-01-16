@@ -25,13 +25,13 @@ date: 2022-01-15
 <ul><li>The dataset using for this analysis is directly imported from sklearn.datasets</li>
 
 
-<h3>We cover the following techniques for implmenting PCA</h3>
+<h3>We cover the following techniques for implementing PCA</h3>
 <ul>
-    <li>PCA using Eigen decomposition </li>
-    <li>PCA using scikit-learn</li>
-    <li>PCA using Power Iteration algorithmn</li>
+    <li>Using Eigen decomposition </li>
+    <li>Using scikit-learn</li>
+    <li>Using Power Iteration algorithmn</li>
 </ul>
 
 
 <h3>Link to source code in Github</h3> 
-<a href= "https://github.com/lakshmi2688/COVID_Impact_on_US_Households">Source code</a>
+<a href= "https://github.com/lakshmi2688/PCA_Images">Source code</a>
