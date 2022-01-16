@@ -21,9 +21,8 @@ date: 2022-01-15
 
 <p>Lots of variability usually indicates signal, whereas little variability usually indicates noise. Thus, the more variability there is in a particular direction is, theoretically, indicative of something important we want to detect.</p>
 
-<h4> Links to Data set and Data dictionary</h4>
-<ul><li>The dataset using for this analysis is directly imported from sklearn.datasets</li>
-
+<h3> Data</h3>
+<p>The dataset using for this analysis is directly imported from sklearn.datasets</p>
 
 <h3>We cover the following techniques for implementing PCA</h3>
 <ul>
@@ -32,16 +31,5 @@ date: 2022-01-15
     <li>Using Power Iteration algorithmn</li>
 </ul>
 
-<h3>Repository structure</h3>
-
-```
-├── README.md
-├── LICENSE
-├── assets
-│   └── pictures
-└── src
-    ├── PCA_Images.ipynb
-```
-
 <h3>Link to source code in Github</h3> 
-<a href= "https://github.com/lakshmi2688/PCA_Images/blob/main/PCA_Images.ipynb">Source code</a>
+<a href= "https://github.com/lakshmi2688/PCA_Images">Source code</a>
