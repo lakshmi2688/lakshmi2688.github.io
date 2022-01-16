@@ -32,6 +32,16 @@ date: 2022-01-15
     <li>Using Power Iteration algorithmn</li>
 </ul>
 
+<h3>Repository structure</h3>
+
+```
+├── README.md
+├── LICENSE
+├── assets
+│   └── pictures
+└── src
+    ├── PCA_Images.ipynb
+```
 
 <h3>Link to source code in Github</h3> 
 <a href= "https://github.com/lakshmi2688/PCA_Images/blob/main/PCA_Images.ipynb">Source code</a>
