@@ -15,7 +15,12 @@ date: 2022-01-15
 
 <p>In PCA we are interested in the components that maximize the variance. If one component (e.g. human height) varies less than another (e.g. weight) because of their respective scales (meters vs. kilos), PCA might determine that the direction of maximal variance more closely corresponds with the ‘weight’ axis, if those features are not scaled. As a change in height of one meter can be considered much more important than the change in weight of one kilogram, this is clearly incorrect. Normalization rescales the values into a range of [0,1]. This might be useful in some cases where all parameters need to have the same positive scale. Standardization rescales data to have a mean (μ) of 0 and standard deviation (σ) of 1 (unit variance). </p>
     
-<p>Prior to performing PCA we should standardize the variables to have a mean of zero and a standard deviation of 1. Take the matrix of independent variables X and, for each column, subtract the mean of that column from each entry. (This ensures that each column has a mean of zero.). Decide whether or not to standardize. Given the columns of X, are features with higher variance more important than features with lower variance, or is the importance of features independent of the variance? (In this case, importance means how well that feature predicts Y.) If the importance of features is independent of the variance of the features, then divide each observation in a column by that column’s standard deviation </p>
+<p>Prior to performing PCA we should either standardize the variables to have a mean of zero and a standard deviation of 1 or demean the data. 
+
+<li>Take the matrix of independent variables X and, for each column, subtract the mean of that column from each entry. This is demean and ensures that each column has a mean of zero. Demeaning data but not standardizing is equivalent to computing principal components from the covariance matrix of data</li>
+<li>Decide whether or not to divide by sd. Given the columns of X, are features with higher variance more important than features with lower variance, or is the importance of features independent of the variance? (In this case, importance means how well that feature predicts Y). If the importance of features is independent of the variance of the features, then divide each observation in a column by that column’s standard deviation. Using standardized data is equivalent to computing principal components from the correlation matrix of data.
+
+</p>
 
 <p>First, the covariance matrix XᵀX is a matrix that contains estimates of how every variable in X relates to every other variable in X. Understanding how one variable is associated with another is quite powerful.</p>
 
