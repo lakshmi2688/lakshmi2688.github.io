@@ -29,7 +29,8 @@ date: 2022-01-15
 <p>Lots of variability usually indicates signal, whereas little variability usually indicates noise. Thus, the more variability there is in a particular direction is, theoretically, indicative of something important we want to detect.</p>
 
 <h3>Assumptions and advantages of PCA</h3>
-<p>- Linearity : PCA assumes that the principle components are a linear combination of the original features. If this is not true, PCA will not give you sensible results.
+<p>
+- Linearity : PCA assumes that the principle components are a linear combination of the original features. If this is not true, PCA will not give you sensible results.
 - Large variance implies more structure : PCA uses variance as the measure of how important a particular dimension is. So, high variance axes are treated as principle components, while low variance axes are treated as noise.
 - Orthogonality : PCA assumes that the principle components are orthogonal.
 
