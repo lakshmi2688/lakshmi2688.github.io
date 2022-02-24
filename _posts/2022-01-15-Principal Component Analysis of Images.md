@@ -28,6 +28,20 @@ date: 2022-01-15
 
 <p>Lots of variability usually indicates signal, whereas little variability usually indicates noise. Thus, the more variability there is in a particular direction is, theoretically, indicative of something important we want to detect.</p>
 
+<h3>Assumptions and advantages of PCA</h3>
+<p>- Linearity : PCA assumes that the principle components are a linear combination of the original features. If this is not true, PCA will not give you sensible results.
+- Large variance implies more structure : PCA uses variance as the measure of how important a particular dimension is. So, high variance axes are treated as principle components, while low variance axes are treated as noise.
+- Orthogonality : PCA assumes that the principle components are orthogonal.
+
+PCA can be useful in exploring large data sets to see the structure of the relationships among variables when a correlation matrix would be overwhelming. Also, unlike correlation, it allows for relationships among sets of variables, rather than just pairs. Sometimes PCA doesn’t work. If the variables are all very uncorrelated, PCA may not be very useful.
+
+Advantages:
+    
+- Lack of redundancy of data given the orthogonal components 
+- Reduced complexity in images’ grouping with the use of PCA
+- Smaller database representation since only the trainee images are stored in the form of their projections on a reduced basis
+- Reduction of noise since the maximum variation basis is chosen and so the small variations in the back-ground are ignored automatically. It filters out the noise, and leaves us with stronger signal.</p>
+
 <h3> Data</h3>
 <p>The dataset using for this analysis is directly imported from sklearn.datasets</p>
 
