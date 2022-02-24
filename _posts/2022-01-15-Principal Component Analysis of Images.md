@@ -30,6 +30,8 @@ date: 2022-01-15
 
 <h3>Assumptions and advantages of PCA</h3>
 <p>
+    
+Assumptions:
 - Linearity : PCA assumes that the principle components are a linear combination of the original features. If this is not true, PCA will not give you sensible results.
 - Large variance implies more structure : PCA uses variance as the measure of how important a particular dimension is. So, high variance axes are treated as principle components, while low variance axes are treated as noise.
 - Orthogonality : PCA assumes that the principle components are orthogonal.
@@ -41,7 +43,8 @@ Advantages:
 - Lack of redundancy of data given the orthogonal components 
 - Reduced complexity in images’ grouping with the use of PCA
 - Smaller database representation since only the trainee images are stored in the form of their projections on a reduced basis
-- Reduction of noise since the maximum variation basis is chosen and so the small variations in the back-ground are ignored automatically. It filters out the noise, and leaves us with stronger signal.</p>
+- Reduction of noise since the maximum variation basis is chosen and so the small variations in the back-ground are ignored automatically. It filters out the noise, and leaves us with stronger signal.
+</p>
 
 <h3> Data</h3>
 <p>The dataset using for this analysis is directly imported from sklearn.datasets</p>
