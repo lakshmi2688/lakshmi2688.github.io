@@ -17,7 +17,7 @@ date: 2022-01-15
     
 Normalization rescales the values into a range of [0,1]. This might be useful in some cases where all parameters need to have the same positive scale. Standardization rescales data to have a mean (μ) of 0 and standard deviation (σ) of 1 (unit variance).
 
-We use the covariance matrix when the variable scales are similar and the correlation matrix when variables are on different scales. Using the correlation matrix is equivalent to standardizing each of the variables (to mean 0 and standard deviation 1). In general, PCA with and without standardizing will give different results. Especially when the scales are different.</p>
+**We use the covariance matrix when the variable scales are similar and the correlation matrix when variables are on different scales. Using the correlation matrix is equivalent to standardizing each of the variables (to mean 0 and standard deviation 1). In general, PCA with and without standardizing will give different results. Especially when the scales are different.**</p>
     
 <p>Prior to performing PCA we should either standardize the variables to have a mean of zero and a standard deviation of 1 or demean the data. 
 <li>Take the matrix of independent variables X and, for each column, subtract the mean of that column from each entry. This is demean and ensures that each column has a mean of zero. Demeaning data but not standardizing is equivalent to computing principal components from the covariance matrix of data. Here all features should be of the same scale. Here, we calculate PCs from covariance matrix</li>
