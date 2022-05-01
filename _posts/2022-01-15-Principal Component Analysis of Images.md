@@ -36,18 +36,21 @@ We use the covariance matrix when the variable scales are similar and the correl
 <p>
     
 Assumptions:
-- Linearity : PCA assumes that the principle components are a linear combination of the original features. If this is not true, PCA will not give you sensible results.
-- Large variance implies more structure : PCA uses variance as the measure of how important a particular dimension is. So, high variance axes are treated as principle components, while low variance axes are treated as noise.
-- Orthogonality : PCA assumes that the principle components are orthogonal.
+<ul>
+<li>- Linearity : PCA assumes that the principle components are a linear combination of the original features. If this is not true, PCA will not give you sensible results.</li>
+<li>- Large variance implies more structure : PCA uses variance as the measure of how important a particular dimension is. So, high variance axes are treated as principle components, while low variance axes are treated as noise.</li>
+<li>- Orthogonality : PCA assumes that the principle components are orthogonal.</li>
+</ul>
 
 PCA can be useful in exploring large data sets to see the structure of the relationships among variables when a correlation matrix would be overwhelming. Also, unlike correlation, it allows for relationships among sets of variables, rather than just pairs. Sometimes PCA doesn’t work. If the variables are all very uncorrelated, PCA may not be very useful.
 
 Advantages:
-    
-- Lack of redundancy of data given the orthogonal components 
-- Reduced complexity in images’ grouping with the use of PCA
-- Smaller database representation since only the trainee images are stored in the form of their projections on a reduced basis
-- Reduction of noise since the maximum variation basis is chosen and so the small variations in the back-ground are ignored automatically. It filters out the noise, and leaves us with stronger signal.
+<ul>    
+<li>- Lack of redundancy of data given the orthogonal components </li>
+<li>- Reduced complexity in images’ grouping with the use of PCA </li>
+<li>- Smaller database representation since only the trainee images are stored in the form of their projections on a reduced basis </li>
+<li>- Reduction of noise since the maximum variation basis is chosen and so the small variations in the back-ground are ignored automatically. It filters out the noise, and leaves us with stronger signal. </li>
+</ul>
 </p>
 
 <h3> Data</h3>
