@@ -13,7 +13,7 @@ date: 2022-01-15
 
 <p>The goal of PCA is to project a dataset consisting of observations  𝑥1,…,𝑥𝑛 ∈ ℝ𝐷  onto a lower dimensional subspace of dimension p such that we maximize the variance of the projected data. An equivalent way of viewing PCA is that we are projecting the data onto a subspace that is "closest" to the observations. If we try to reconstruct the original data from the data projected using PCA, we will get the "best" possible reconstruction.The first principal component is the direction that captures the most variance. The second principal component is the direction that is orthogonal to the first direction and captures as much variance as possible, etc. Each principal component is orthogonal to the previous components.</p>
 
-<p>In PCA we are interested in the components that maximize the variance. If one component (e.g. human height) varies less than another (e.g. weight) because of their respective scales (meters vs. kilos), PCA might determine that the direction of maximal variance more closely corresponds with the ‘weight’ axis, if those features are not scaled. As a change in height of one meter can be considered much more important than the change in weight of one kilogram, this is clearly incorrect. 
+<p>In PCA we are interested in the components that maximize the variance. If one component (e.g. human height) varies less than another (e.g. weight) because of their respective scales (meters vs. kilos), PCA might determine that the direction of maximal variance more closely corresponds with the ‘weight’ axis, if those features are not scaled. As a change in height of one meter can be considered much more important than the change in weight of one kilogram, this is clearly incorrect. </p>
    
 <p>Prior to performing PCA we should either standardize the variables to have a mean of zero and a standard deviation of 1 if features are of different scales or demean the data if features are of the same scale
    
@@ -22,9 +22,12 @@ Normalization rescales the values into a range of [0,1]. This might be useful in
 We use the covariance matrix when the variable scales are similar and the correlation matrix when variables are on different scales. Using the correlation matrix is equivalent to standardizing each of the variables (to mean 0 and standard deviation 1). In general, PCA with and without standardizing will give different results. Especially when the scales are different.</p>
 
 <p>
-   <ul><li>Take the matrix of independent variables X and, for each column, subtract the mean of that column from each entry. This is demeaning and ensures that each column has a mean of zero. Demeaning data but not standardizing is equivalent to computing principal components from the covariance matrix of data. Here we assume all features are of the same scale. For our example, we calculate PCs from covariance matrix</li>
+<ul>
+   <li>Take the matrix of independent variables X and, for each column, subtract the mean of that column from each entry. This is demeaning and ensures that each column has a mean of zero. Demeaning data but not standardizing is equivalent to computing principal components from the covariance matrix of data. Here we assume all features are of the same scale. For our example, we calculate PCs from covariance matrix</li>
 
-<li>Decide whether or not to divide by sd. Given the columns of X, are features with higher variance more important than features with lower variance, or is the importance of features independent of the variance? (In this case, importance means how well that feature predicts Y). If the importance of features is independent of the variance of the features, then divide each observation in a column by that column’s standard deviation. Using standardized data is equivalent to computing principal components from the correlation matrix of data. If the features are of different scales, we use this approach.</li></ul></p>
+   <li>Decide whether or not to divide by sd. Given the columns of X, are features with higher variance more important than features with lower variance, or is the importance of features independent of the variance? (In this case, importance means how well that feature predicts Y). If the importance of features is independent of the variance of the features, then divide each observation in a column by that column’s standard deviation. Using standardized data is equivalent to computing principal components from the correlation matrix of data. If the features are of different scales, we use this approach</li>
+</ul>
+</p>
 
 <p>First, the covariance matrix XᵀX is a matrix that contains estimates of how every variable in X relates to every other variable in X. Understanding how one variable is associated with another is quite powerful. Building the covariance matrix is the actual first step of PCA. In this step, we will be building a square dxd matrix where each row represents a feature and each column also represents a feature. Each entry represents the covariance between the row feature and the column feature at that position. Covariance tells us how the two features vary with respect to one another. If a given sample has a value above the mean (which we’ve set to zero through demean) for both features then we get a positive result as the product. The same is true if the values for both features are below the mean. Conversely, if one value is below and one is above we will get a negative value. If the covariance for a given pair of features is positive, both of these features tend to increase or decrease together. If the covariance is negative, one feature tends to increase as the other decreases. If the covariance is zero then the two features are unrelated. Correlation is defined as the covariance divided by the product of both standard deviations.</p>
 
@@ -33,14 +36,15 @@ We use the covariance matrix when the variable scales are similar and the correl
 <p>Lots of variability usually indicates signal, whereas little variability usually indicates noise. Thus, the more variability there is in a particular direction is, theoretically, indicative of something important we want to detect.</p>
 
 <h3>Assumptions and advantages of PCA</h3>
+
 <p>
-    
 Assumptions:
 <ul>
 <li> Linearity : PCA assumes that the principle components are a linear combination of the original features. If this is not true, PCA will not give you sensible results.</li>
 <li> Large variance implies more structure : PCA uses variance as the measure of how important a particular dimension is. So, high variance axes are treated as principle components, while low variance axes are treated as noise.</li>
 <li> Orthogonality : PCA assumes that the principle components are orthogonal.</li>
 </ul>
+</p>
 
 <p>PCA can be useful in exploring large data sets to see the structure of the relationships among variables when a correlation matrix would be overwhelming. Also, unlike correlation, it allows for relationships among sets of variables, rather than just pairs. Sometimes PCA doesn’t work. If the variables are all very uncorrelated, PCA may not be very useful.</p>
 
