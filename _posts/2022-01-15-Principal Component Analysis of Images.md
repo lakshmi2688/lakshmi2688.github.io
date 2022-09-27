@@ -21,6 +21,7 @@ Normalization rescales the values into a range of [0,1]. This might be useful in
 
 We use the covariance matrix when the variable scales are similar and the correlation matrix when variables are on different scales. Using the correlation matrix is equivalent to standardizing each of the variables (to mean 0 and standard deviation 1). In general, PCA with and without standardizing will give different results. Especially when the scales are different.</p>
 
+<p>
 <li>Take the matrix of independent variables X and, for each column, subtract the mean of that column from each entry. This is demeaning and ensures that each column has a mean of zero. Demeaning data but not standardizing is equivalent to computing principal components from the covariance matrix of data. Here we assume all features are of the same scale. For our example, we calculate PCs from covariance matrix</li>
 
 <li>Decide whether or not to divide by sd. Given the columns of X, are features with higher variance more important than features with lower variance, or is the importance of features independent of the variance? (In this case, importance means how well that feature predicts Y). If the importance of features is independent of the variance of the features, then divide each observation in a column by that column’s standard deviation. Using standardized data is equivalent to computing principal components from the correlation matrix of data. If the features are of different scales, we use this approach.</li>
