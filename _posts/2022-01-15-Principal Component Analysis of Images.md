@@ -35,10 +35,10 @@ We use the covariance matrix when the variable scales are similar and the correl
 
 <p>Lots of variability usually indicates signal, whereas little variability usually indicates noise. Thus, the more variability there is in a particular direction is, theoretically, indicative of something important we want to detect.</p>
 
-<h3>Assumptions and advantages of PCA</h3>
+<h2>Assumptions and advantages of PCA</h2>
 
 <p>
-Assumptions:
+<h3>Assumptions:</h3>
 <ul>
 <li> Linearity : PCA assumes that the principle components are a linear combination of the original features. If this is not true, PCA will not give you sensible results.</li>
 <li> Large variance implies more structure : PCA uses variance as the measure of how important a particular dimension is. So, high variance axes are treated as principle components, while low variance axes are treated as noise.</li>
@@ -49,7 +49,7 @@ Assumptions:
 <p>PCA can be useful in exploring large data sets to see the structure of the relationships among variables when a correlation matrix would be overwhelming. Also, unlike correlation, it allows for relationships among sets of variables, rather than just pairs. Sometimes PCA doesn’t work. If the variables are all very uncorrelated, PCA may not be very useful.</p>
 
 <p>
-Advantages:
+<h3>Advantages:</h3>
 <ul>    
 <li> Lack of redundancy of data given the orthogonal components </li>
 <li> Reduced complexity in images’ grouping with the use of PCA </li>
