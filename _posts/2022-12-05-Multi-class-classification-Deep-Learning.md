@@ -18,11 +18,11 @@ date: 2022-12-05
 
 ![BGD](/assets/Multi-class-classification/Images/BGD_lr_0.01.jpg)
 
-<h2> 3-Layered NN with mIN-Batch Gradient Descent and L2 Regularization </h2>
+<h2> 3-Layered NN with Mini-Batch Gradient Descent and L2 Regularization </h2>
 
+![MBGD](/assets/Multi-class-classification/Images/MBGD_lr_0.0001.jpg)
 ![MBGD](/assets/Multi-class-classification/Images/MBGD_noreg_adam_decay.jpg)
 
-![K-means clustering](/assets/Classification/logistic_reg_decision_boundary.jpg)
 
 <h2> Analysis 2 - Neural Network decision boundary </h2>
 
