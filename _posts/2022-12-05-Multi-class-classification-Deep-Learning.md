@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: 
 title: "Multi Class Classification using Deep Learning"
 date: 2022-12-05
 ---
