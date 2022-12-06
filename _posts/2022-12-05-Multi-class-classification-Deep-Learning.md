@@ -6,7 +6,7 @@ date: 2022-12-05
 
 <h2><strong> Abstract </strong></h2>
 <p>The goal of this project is to explore and understand some Deep Learning concepts and apply them to solving this Multi-classification problem. There are 2 parts to this analysis: </p>
-<ul><li>We build a Multilayer Neural Network in Python from scratch using various Optimization methods </li>
+<ul><li>Build a Multilayer Neural Network in Python from scratch using various Optimization methods </li>
 <li>Implement the same using Tensorflow Deep Learning framework and compare the results</li>
 </ul>
 
