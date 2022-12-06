@@ -7,6 +7,7 @@ date: 2022-12-05
 <h3>Abstract</h3> 
 <p>The goal of this analysis is to solve a multiclass classification problem by applying some of the concepts from Deep Learning and implement the same in Tensorflow.
 <a name='2'></a>
+    
 ### 1 - (Batch) Gradient Descent
 
 A simple optimization method in machine learning is gradient descent (GD). When you take gradient steps with respect to all $m$ examples on each step, it is also called Batch Gradient Descent. 
