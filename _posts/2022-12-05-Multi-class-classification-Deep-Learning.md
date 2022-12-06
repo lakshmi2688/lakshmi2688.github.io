@@ -6,52 +6,114 @@ date: 2022-12-05
 
 <h3>Abstract</h3> 
 <p>The goal of this analysis is to solve a multiclass classification problem by applying some of the concepts from Deep Learning and implement the same in Tensorflow.
-<a name='5'></a>   
-### 5 - Adam Optimizer
+<a name='2'></a>
+### 1 - (Batch) Gradient Descent
 
-Adam is one of the most effective optimization algorithms for training neural networks. It combines ideas from RMSProp  and Momentum. 
+A simple optimization method in machine learning is gradient descent (GD). When you take gradient steps with respect to all $m$ examples on each step, it is also called Batch Gradient Descent. 
+The  gradient descent rule is, for $l = 1, ..., L$: 
+$$ W^{[l]} = W^{[l]} - \alpha \text{ } dW^{[l]} \tag{1}$$
+$$ b^{[l]} = b^{[l]} - \alpha \text{ } db^{[l]} \tag{2}$$
 
-**How does Adam work?**
-1. It calculates an exponentially weighted average of past gradients, and stores it in variables $v$ (before bias correction) and $v^{corrected}$ (with bias correction). 
-2. It calculates an exponentially weighted average of the squares of the past gradients, and  stores it in variables $s$ (before bias correction) and $s^{corrected}$ (with bias correction). 
-3. It updates parameters in a direction based on combining information from "1" and "2".
+where L is the number of layers and $\alpha$ is the learning rate. 
 
-The update rule is, for $l = 1, ..., L$: 
 
-$$\begin{cases}
-v_{dW^{[l]}} = \beta_1 v_{dW^{[l]}} + (1 - \beta_1) \frac{\partial \mathcal{J} }{ \partial W^{[l]} } \\
-v^{corrected}_{dW^{[l]}} = \frac{v_{dW^{[l]}}}{1 - (\beta_1)^t} \\
-s_{dW^{[l]}} = \beta_2 s_{dW^{[l]}} + (1 - \beta_2) (\frac{\partial \mathcal{J} }{\partial W^{[l]} })^2 \\
-s^{corrected}_{dW^{[l]}} = \frac{s_{dW^{[l]}}}{1 - (\beta_2)^t} \\
-W^{[l]} = W^{[l]} - \alpha \frac{v^{corrected}_{dW^{[l]}}}{\sqrt{s^{corrected}_{dW^{[l]}}} + \varepsilon}
-\end{cases}$$
-where:
-- t counts the number of steps taken of Adam 
-- L is the number of layers
-- $\beta_1$ and $\beta_2$ are hyperparameters that control the two exponentially weighted averages. 
-- $\alpha$ is the learning rate
-- $\varepsilon$ is a very small number to avoid dividing by zero
-
-Initialize the Adam variables $v, s$ which keep track of the past information.
-The variables $v, s$ are python dictionaries that need to be initialized with arrays of zeros. Their keys are the same as for `grads`, that is:
-for $l = 1, ..., L$:
-```python
-v["dW" + str(l)] = ... #(numpy array of zeros with the same shape as parameters["W" + str(l)])
-v["db" + str(l)] = ... #(numpy array of zeros with the same shape as parameters["b" + str(l)])
-s["dW" + str(l)] = ... #(numpy array of zeros with the same shape as parameters["W" + str(l)])
-s["db" + str(l)] = ... #(numpy array of zeros with the same shape as parameters["b" + str(l)])
-
+``` python
+X = data_input
+Y = labels
+m = X.shape[1]  # Number of training examples
+parameters = initialize_parameters(layers_dims)
+for i in range(0, num_iterations):
+    # Forward propagation
+    a, caches = forward_propagation(X, parameters)
+    # Compute cost
+    cost_total = compute_cost(a, Y)  # Cost for m training examples
+    # Backward propagation
+    grads = backward_propagation(a, caches, parameters)
+    # Update parameters
+    parameters = update_parameters(parameters, grads)
+    # Compute average cost
+    cost_avg = cost_total / m
+        
 ```
 
-Implement the parameters update with Adam. Recall the general update rule is, for $l = 1, ..., L$: 
+### 2 -  Stocastic Gradient Descent
 
-$$\begin{cases}
-v_{dW^{[l]}} = \beta_1 v_{dW^{[l]}} + (1 - \beta_1) \frac{\partial \mathcal{J} }{ \partial W^{[l]} } \\
-v^{corrected}_{dW^{[l]}} = \frac{v_{dW^{[l]}}}{1 - (\beta_1)^t} \\
-s_{dW^{[l]}} = \beta_2 s_{dW^{[l]}} + (1 - \beta_2) (\frac{\partial \mathcal{J} }{\partial W^{[l]} })^2 \\
-s^{corrected}_{dW^{[l]}} = \frac{s_{dW^{[l]}}}{1 - (\beta_2)^t} \\
-W^{[l]} = W^{[l]} - \alpha \frac{v^{corrected}_{dW^{[l]}}}{\sqrt{s^{corrected}_{dW^{[l]}}} + \varepsilon}
-\end{cases}$$
+A variant of Gardient Descent is Stochastic Gradient Descent (SGD), which is equivalent to mini-batch gradient descent, where each mini-batch has just 1 example. What changes is that you would be computing gradients on just one training example at a time, rather than on the whole training set. The code examples below illustrate the difference between stochastic gradient descent and (batch) gradient descent. 
+
+```python
+X = data_input
+Y = labels
+m = X.shape[1]  # Number of training examples
+parameters = initialize_parameters(layers_dims)
+for i in range(0, num_iterations):
+    cost_total = 0
+    for j in range(0, m):
+        # Forward propagation
+        a, caches = forward_propagation(X[:,j], parameters)
+        # Compute cost
+        cost_total += compute_cost(a, Y[:,j])  # Cost for one training example
+        # Backward propagation
+        grads = backward_propagation(a, caches, parameters)
+        # Update parameters
+        parameters = update_parameters(parameters, grads)
+    # Compute average cost
+    cost_avg = cost_total / m
+```
+
+
+In Stochastic Gradient Descent, you use only 1 training example before updating the gradients. When the training set is large, SGD can be faster. But the parameters will "oscillate" toward the minimum rather than converge smoothly. Here's what that looks like: 
+
+<img src="images/kiank_sgd.png" style="width:750px;height:250px;">
+<caption><center> <u> <font color='purple'> <b>Figure 1</b> </u><font color='purple'>  : <b>SGD vs GD</b><br> "+" denotes a minimum of the cost. SGD leads to many oscillations to reach convergence, but each step is a lot faster to compute for SGD than it is for GD, as it uses only one training example (vs. the whole batch for GD). </center></caption>
+
+Implementing SGD requires 3 for-loops in total:
+1. Over the number of iterations
+2. Over the $m$ training examples
+3. Over the layers (to update all parameters, from $(W^{[1]},b^{[1]})$ to $(W^{[L]},b^{[L]})$)
+
+In practice, you'll often get faster results if you don't use the entire training set, or just one training example, to perform each update. 
+    
+<a name='3'></a>
+### 3 - Mini-Batch Gradient Descent
+
+Mini-batch gradient descent uses an intermediate number of examples for each step. With mini-batch gradient descent, you loop over the mini-batches instead of looping over individual training examples.
+    
+```python
+X = data_input
+Y = labels
+m = X.shape[1]  # Number of training examples
+parameters = initialize_parameters(layers_dims)
+for i in range(0, num_epochs):
+    #generate mini batches by shuffling and partitioning
+    minibatches = random_mini_batches(X, Y, mini_batch_size)
+    for minibatch in minibatches:
+        #get x and y component of each minibatch
+        (mini_X, mini_Y) = minibatch
+        # Forward propagation
+        a, caches = forward_propagation(mini_X, parameters)
+        # Compute cost
+        cost_total += compute_cost(a, mini_Y)  # Cost for one training example
+        # Backward propagation
+        grads = backward_propagation(a, mini_Y, caches)
+        # Update parameters
+        parameters = update_parameters(parameters, grads, learning_rate)
+    # Compute average cost
+    cost_avg = cost_total / m
+```
+
+<img src="images/kiank_minibatch.png" style="width:750px;height:250px;">
+<caption><center> <u> <font color='purple'> <b>Figure 2</b> </u>: <font color='purple'>  <b>SGD vs Mini-Batch GD</b><br> "+" denotes a minimum of the cost. Using mini-batches in your optimization algorithm often leads to faster optimization. </center></caption>
+
+There are two steps:
+- **Shuffle**: Create a shuffled version of the training set (X, Y) as shown below. Each column of X and Y represents a training example. Note that the random shuffling is done synchronously between X and Y. Such that after the shuffling the $i^{th}$ column of X is the example corresponding to the $i^{th}$ label in Y. The shuffling step ensures that examples will be split randomly into different mini-batches. 
+
+<img src="images/kiank_shuffle.png" style="width:550px;height:300px;">
+
+- **Partition**: Partition the shuffled (X, Y) into mini-batches of size `mini_batch_size` (here 64). Note that the number of training examples is not always divisible by `mini_batch_size`. The last mini batch might be smaller. When the final mini-batch is smaller than the full `mini_batch_size`, it will look like this: 
+
+<img src="images/kiank_partition.png" style="width:550px;height:300px;">
+
+<a name='ex-2'></a>
 
 <p>
 <ul>
