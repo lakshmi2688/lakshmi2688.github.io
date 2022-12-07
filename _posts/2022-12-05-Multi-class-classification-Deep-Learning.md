@@ -75,7 +75,7 @@ In Stochastic Gradient Descent, you use only 1 training example before updating 
 Implementing SGD requires 3 for-loops in total:
 1. Over the number of iterations
 2. Over the $m$ training examples
-3. Over the layers (to update all parameters, from $(W^{[1]},b^{[1]})$ to $(W^{[L]},b^{[L]})$)
+3. Over the layers (to update all parameters, from $(W^{[1]},b^{[1]})$ to $(W^{[L]},b^{[L]})$ )
 
 In practice, you'll often get faster results if you don't use the entire training set, or just one training example, to perform each update. 
     
