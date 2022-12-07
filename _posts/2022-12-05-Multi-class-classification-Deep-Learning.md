@@ -124,9 +124,6 @@ There are two steps:
 <a name='ex-2'></a>
     
 
-
-
-
 <a name='4'></a>
 ### 4 - Momentum
 
@@ -220,8 +217,10 @@ W^{[l]} = W^{[l]} - \alpha \frac{v^{corrected}_{dW^{[l]}}}{\sqrt{s^{corrected}_{
 </p>
 
 <h2> Input Data </h2>
-
+    
 ![Input Data](/assets/Multi-class-classification/Images/Input_Data_HandSigns.jpg)
+    
+<h2> 3-Layered NN with Batch Gradient Descent and L2 Regularization </h2>
 
 <h2> 3-Layered NN with Batch Gradient Descent and L2 Regularization </h2>
 
