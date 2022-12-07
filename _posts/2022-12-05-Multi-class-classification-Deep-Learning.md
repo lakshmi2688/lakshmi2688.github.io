@@ -227,11 +227,20 @@ W^{[l]} = W^{[l]} - \alpha \frac{v^{corrected}_{dW^{[l]}}}{\sqrt{s^{corrected}_{
 <h2> 3-Layered NN with Batch Gradient Descent and L2 Regularization </h2>
 
 ![BGD](/assets/Multi-class-classification/Images/BGD_lr_0.01.jpg)
-
+    
 <h2> 3-Layered NN with Mini-Batch Gradient Descent and L2 Regularization </h2>
 
 ![MBGD](/assets/Multi-class-classification/Images/MBGD_lr_0.0001.jpg)
 ![MBGD](/assets/Multi-class-classification/Images/MBGD_noreg_adam_decay.jpg)
+
+<h2> 3-Layered NN with Mini-Batch Gradient Descent, Adam Decay and Learning Rate Decay on every iteration </h2>
+
+![MBGD](/assets/Multi-class-classification/Images/MBGD_noreg_adam_decay.jpg)
+    
+<h2> 3-Layered NN with Mini-Batch Gradient Descent, Adam Decay and Fixed Interval Scheduling </h2>
+    
+![MBGD](/assets/Multi-class-classification/Images/MBGD_noreg_adam_scheduled_decay.jpg)
+
 
 
 <h2> Analysis 2 - Neural Network decision boundary </h2>
