@@ -187,6 +187,7 @@ s_{dW^{[l]}} = \beta_2 s_{dW^{[l]}} + (1 - \beta_2) (\frac{\partial \mathcal{J} 
 s^{corrected}_{dW^{[l]}} = \frac{s_{dW^{[l]}}}{1 - (\beta_2)^t} \\
 W^{[l]} = W^{[l]} - \alpha \frac{v^{corrected}_{dW^{[l]}}}{\sqrt{s^{corrected}_{dW^{[l]}}} + \varepsilon}
 \end{cases}$$
+    
 where:
 - t counts the number of steps taken of Adam 
 - L is the number of layers
@@ -197,6 +198,7 @@ where:
 Initialize the Adam variables $v, s$ which keep track of the past information.
 The variables $v, s$ are python dictionaries that need to be initialized with arrays of zeros. Their keys are the same as for `grads`, that is:
 for $l = 1, ..., L$:
+    
 ```python
 v["dW" + str(l)] = ... #(numpy array of zeros with the same shape as parameters["W" + str(l)])
 v["db" + str(l)] = ... #(numpy array of zeros with the same shape as parameters["b" + str(l)])
@@ -214,6 +216,7 @@ s_{dW^{[l]}} = \beta_2 s_{dW^{[l]}} + (1 - \beta_2) (\frac{\partial \mathcal{J} 
 s^{corrected}_{dW^{[l]}} = \frac{s_{dW^{[l]}}}{1 - (\beta_2)^t} \\
 W^{[l]} = W^{[l]} - \alpha \frac{v^{corrected}_{dW^{[l]}}}{\sqrt{s^{corrected}_{dW^{[l]}}} + \varepsilon}
 \end{cases}$$
+    
 </p>
 
 <h2> Input Data </h2>
