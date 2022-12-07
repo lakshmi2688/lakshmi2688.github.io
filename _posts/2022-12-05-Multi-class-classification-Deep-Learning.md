@@ -220,7 +220,9 @@ W^{[l]} = W^{[l]} - \alpha \frac{v^{corrected}_{dW^{[l]}}}{\sqrt{s^{corrected}_{
     
 ![Input Data](/assets/Multi-class-classification/Images/Input_Data_HandSigns.jpg)
     
-<h2> 3-Layered NN with Batch Gradient Descent and L2 Regularization </h2>
+<h2> 3-Layered NN with Batch Gradient Descent and without Regularization </h2>
+    
+![BGD](/assets/Multi-class-classification/Images/BGD_w:o_reg_lr_0.01.jpg)
 
 <h2> 3-Layered NN with Batch Gradient Descent and L2 Regularization </h2>
 
