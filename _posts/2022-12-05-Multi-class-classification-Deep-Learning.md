@@ -11,6 +11,7 @@ date: 2022-12-05
 </ul>
 
 <p><a name='2'></a>
+    
 ### 1 - (Batch) Gradient Descent
 
 A simple optimization method in machine learning is gradient descent (GD). When you take gradient steps with respect to all $m$ examples on each step, it is also called Batch Gradient Descent. 
@@ -67,7 +68,7 @@ for i in range(0, num_iterations):
 
 In Stochastic Gradient Descent, you use only 1 training example before updating the gradients. When the training set is large, SGD can be faster. But the parameters will "oscillate" toward the minimum rather than converge smoothly. Here's what that looks like: 
 
-<img src="images/kiank_sgd.png" style="width:750px;height:250px;">
+<img src="/assets/Multi-class-classification/Images/kiank_sgd.png" style="width:750px;height:250px;">
 <caption><center> <u> <font color='purple'> <b>Figure 1</b> </u><font color='purple'>  : <b>SGD vs GD</b><br> "+" denotes a minimum of the cost. SGD leads to many oscillations to reach convergence, but each step is a lot faster to compute for SGD than it is for GD, as it uses only one training example (vs. the whole batch for GD). </center></caption>
 
 Implementing SGD requires 3 for-loops in total:
@@ -105,17 +106,17 @@ for i in range(0, num_epochs):
     cost_avg = cost_total / m
 ```
 
-<img src="images/kiank_minibatch.png" style="width:750px;height:250px;">
+<img src="/assets/Multi-class-classification/Images/kiank_minibatch.png" style="width:750px;height:250px;">
 <caption><center> <u> <font color='purple'> <b>Figure 2</b> </u>: <font color='purple'>  <b>SGD vs Mini-Batch GD</b><br> "+" denotes a minimum of the cost. Using mini-batches in your optimization algorithm often leads to faster optimization. </center></caption>
 
 There are two steps:
 - **Shuffle**: Create a shuffled version of the training set (X, Y) as shown below. Each column of X and Y represents a training example. Note that the random shuffling is done synchronously between X and Y. Such that after the shuffling the $i^{th}$ column of X is the example corresponding to the $i^{th}$ label in Y. The shuffling step ensures that examples will be split randomly into different mini-batches. 
 
-<img src="images/kiank_shuffle.png" style="width:550px;height:300px;">
+<img src="/assets/Multi-class-classification/Images/kiank_shuffle.png" style="width:550px;height:300px;">
 
 - **Partition**: Partition the shuffled (X, Y) into mini-batches of size `mini_batch_size` (here 64). Note that the number of training examples is not always divisible by `mini_batch_size`. The last mini batch might be smaller. When the final mini-batch is smaller than the full `mini_batch_size`, it will look like this: 
 
-<img src="images/kiank_partition.png" style="width:550px;height:300px;">
+<img src="/assets/Multi-class-classification/Images/kiank_partition.png" style="width:550px;height:300px;">
 
 - Shuffling and Partitioning are the two steps required to build mini-batches
 - Powers of two are often chosen to be the mini-batch size, e.g., 16, 32, 64, 128.
@@ -132,7 +133,7 @@ Because mini-batch gradient descent makes a parameter update after seeing just a
 
 Momentum takes into account the past gradients to smooth out the update. The 'direction' of the previous gradients is stored in the variable $v$. Formally, this will be the exponentially weighted average of the gradient on previous steps. You can also think of $v$ as the "velocity" of a ball rolling downhill, building up speed (and momentum) according to the direction of the gradient/slope of the hill. 
 
-<img src="images/opt_momentum.png" style="width:400px;height:250px;">
+<img src="/assets/Multi-class-classification/Images/opt_momentum.png" style="width:400px;height:250px;">
 <caption><center> <u><font color='purple'><b>Figure 3</b> </u><font color='purple'>: The red arrows show the direction taken by one step of mini-batch gradient descent with momentum. The blue points show the direction of the gradient (with respect to the current mini-batch) on each step. Rather than just following the gradient, the gradient is allowed to influence $v$ and then take a step in the direction of $v$.<br> <font color='black'> </center>
     
 The velocity, $v$, is a python dictionary that needs to be initialized with arrays of zeros. Its keys are the same as those in the `grads` dictionary, that is:
