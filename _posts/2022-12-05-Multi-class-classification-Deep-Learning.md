@@ -10,6 +10,7 @@ date: 2022-12-05
 <li>Implement the same using Tensorflow Deep Learning framework and compare the results</li>
 </ul>
 
+
 <p><a name='2'></a>
     
 ### 1 - (Batch) Gradient Descent
