@@ -12,8 +12,8 @@ date: 2022-12-05
 
 A simple optimization method in machine learning is gradient descent (GD). When you take gradient steps with respect to all $m$ examples on each step, it is also called Batch Gradient Descent. 
 The  gradient descent rule is, for $l = 1, ..., L$: 
-$$ W^{[l]} = W^{[l]} - \alpha \text{ } dW^{[l]} \tag{1}$$
-$$ b^{[l]} = b^{[l]} - \alpha \text{ } db^{[l]} \tag{2}$$
+$$ W^{[l]} = W^{[l]} - \alpha \text{ } dW^{[l]} \tag{1} $$
+$$ b^{[l]} = b^{[l]} - \alpha \text{ } db^{[l]} \tag{2} $$
 
 where L is the number of layers and $\alpha$ is the learning rate. 
 
