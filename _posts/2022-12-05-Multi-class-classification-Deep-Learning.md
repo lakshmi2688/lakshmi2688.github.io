@@ -16,8 +16,12 @@ The  gradient descent rule is, for $l = 1, ..., L$:
 
 ```math
 W^{[l]} = W^{[l]} - \alpha \text{ } dW^{[l]} \tag{1}
+```
+
+```math
 b^{[l]} = b^{[l]} - \alpha \text{ } db^{[l]} \tag{2}
 ```
+
 where L is the number of layers and $\alpha$ is the learning rate. 
 
 
