@@ -16,7 +16,6 @@ The  gradient descent rule is, for $l = 1, ..., L$
 
 $$W^{[l]} = W^{[l]} - \alpha \text{ } dW^{[l]} \tag{1}$$
 
-
 $$b^{[l]} = b^{[l]} - \alpha \text{ } db^{[l]} \tag{2}$$
 
 where L is the number of layers and $\alpha$ is the learning rate. 
@@ -76,7 +75,7 @@ Implementing SGD requires 3 for-loops in total:
 2. Over the $m$ training examples
 3. Over the layers (to update all parameters, from $(W^{[1]},b^{[1]})$ to $(W^{[L]},b^{[L]})$ )
 
-In practice, you'll often get faster results if you don't use the entire training set, or just one training example, to perform each update. 
+In practice, you'll often get faster results if you don't use the entire training set, or just one training example, to perform each update.
     
 #### 3 - Mini-Batch Gradient Descent
 
