@@ -18,10 +18,6 @@ $$W^{[l]} = W^{[l]} - \alpha \text{ } dW^{[l]} \tag{1}$$
 
 $$b^{[l]} = b^{[l]} - \alpha \text{ } db^{[l]} \tag{2}$$
 
-$$
-  \int_0^\infty \frac{x^3}{e^x-1}\,dx = \frac{\pi^4}{15}
-$$
-
 where L is the number of layers and $\alpha$ is the learning rate. 
 
 
