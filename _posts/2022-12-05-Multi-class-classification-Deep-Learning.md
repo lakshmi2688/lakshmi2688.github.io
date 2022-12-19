@@ -7,7 +7,8 @@ date: 2022-12-05
 <h2><strong> Abstract </strong></h2>
 <p>In this exercise, we explore different initialization, optimization and regularization techniques and model a multi-classification problem using Python and Tensorflow incorporatig some of these techniques.  </p>
 
-    
+### Optimization Methods
+
 #### 1 - (Batch) Gradient Descent
 
 A simple optimization method in machine learning is gradient descent (GD). When you take gradient steps with respect to all $m$ examples on each step, it is also called Batch Gradient Descent. 
