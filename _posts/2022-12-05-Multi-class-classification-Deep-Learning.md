@@ -222,7 +222,32 @@ In general, initializing all the weights to zero results in the network failing 
     - This is named for the first author of He et al., 2015. (If you have heard of "Xavier initialization", this is similar except Xavier initialization uses a scaling factor for the weights $W^{[l]}$ of `sqrt(1./layers_dims[l-1])` where He initialization would use `sqrt(2./layers_dims[l-1])`.)
     - You will multiply it by $\sqrt{\frac{2}{\text{dimension of the previous layer}}}$, which is what He initialization recommends for layers with a ReLU activation. 
 
+### Regularization
 
+If the regularization becomes very large, then dw is very large, the parameters W becomes very small, so Z will be relatively small. And so the activation function such as tanh will be relatively linear resulting in less overfitting.
+
+- **L2 regularization**: L2-regularization relies on the assumption that a model with small weights is simpler than a model with large weights. Thus, by penalizing the square values of the weights in the cost function you drive all the weights to smaller values. It becomes too costly for the cost to have large weights! This leads to a smoother model in which the output changes more slowly as the input changes. For L2 regularization, `model()` function will call: 
+    - `compute_cost_with_regularization` 
+    - `backward_propagation_with_regularization` 
+    - The value of $\lambda$ is a hyperparameter that you can tune using a dev set.
+    - L2 regularization makes your decision boundary smoother. If $\lambda$ is too large, it is also possible to "oversmooth", resulting in a model with high bias.
+
+
+- **Dropout regularization**: Dropout is a widely used regularization technique that is specific to deep learning. 
+It randomly shuts down some neurons in each iteration.** At each iteration, you shut down (= set to zero) each neuron of a layer with probability  1−𝑘𝑒𝑒𝑝_𝑝𝑟𝑜𝑏  or keep it with probability  𝑘𝑒𝑒𝑝_𝑝𝑟𝑜𝑏. The dropped neurons don't contribute to the training in both the forward and backward propagations of the iteration. When you shut some neurons down, you actually modify your model. The idea behind drop-out is that at each iteration, you train a different model that uses only a subset of your neurons. With dropout, your neurons thus become less sensitive to the activation of one other specific neuron, because that other neuron might be shut down at any time.
+
+    In dropout, each neuron/unit will be more motivated to spread out its weights to each of its inputs. This will tend to have an effect of shrinking the squared norm of the weights, similar to L2 regularization. We can also vary keep prob for each layer. Keep prob=1 means we wont drop any unit. Generally we use a very high keep prob for a layer that has lot of hidden units.
+    1. Create a random matrix $D^{[1]} = [d^{[1](1)} d^{[1](2)} ... d^{[1](m)}] $ of the same dimension as $A^{[1]}$.
+    2. Set each entry of $D^{[1]}$ to be 1 with probability (`keep_prob`), and 0 otherwise.
+    Let's say that keep_prob = 0.8, which means that we want to keep about 80% of the neurons and drop out about 20% of them.  We want to generate a vector that has 1's and 0's, where about 80% of them are 1 and about 20% are 0.
+    The expression `X = (X < keep_prob).astype(int)` works with multi-dimensional arrays, and the resulting output preserves the dimensions of the input array.
+    3. Set $A^{[1]}$ to $A^{[1]} * D^{[1]}$. (You are shutting down some neurons). You can think of $D^{[1]}$ as a mask, so that when it is multiplied with another matrix, it shuts down some of the values.
+    4. Divide $A^{[1]}$ by `keep_prob`. We do this to assure cost will still have the same expected value as without drop-out and to keep the same expected value for the activations. This technique is also called inverted dropout.For example, if keep_prob is 0.5, then we will on average shut down half the nodes, so the output will be scaled by 0.5 since only the remaining half are contributing to the solution. Dividing by 0.5 is equivalent to multiplying by 2. Hence, the output now has the same expected value. You can check that this works even when keep_prob is other values than 0.5.  
+    5. Do not apply drop out to input or output layers. 
+    6. You only use dropout during training. Don't use dropout (randomly eliminate nodes) during test time.
+    7. Apply dropout both during forward and backward propagation.
+
+        
 <h2> Input Data </h2>
     
 ![Input Data](/assets/Multi-class-classification/Images/Input_Data_HandSigns.jpg)
