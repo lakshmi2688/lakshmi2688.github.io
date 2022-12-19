@@ -12,9 +12,7 @@ date: 2022-12-05
 #### 1 - (Batch) Gradient Descent
 
 A simple optimization method in machine learning is gradient descent (GD). When you take gradient steps with respect to all $m$ examples on each step, it is also called Batch Gradient Descent. 
-The  gradient descent rule is, for 
-```math
-l = 1, ..., L
+The  gradient descent rule is, for $l = 1, ..., L$
 
 <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script>
 $$ {J(\theta) =\frac{1}{2m} [\sum^m_{i=1}(h_\theta(x^{(i)}) - y^{(i)})2 + \lambda\sum^n_{j=1}\theta^2_j} $$
