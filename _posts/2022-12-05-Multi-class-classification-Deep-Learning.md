@@ -225,20 +225,25 @@ s["db" + str(l)] = ... #(numpy array of zeros with the same shape as parameters[
 ![MBGD](/assets/Multi-class-classification/Images/MBGD_noreg_adam_scheduled_decay.jpg)
 
 
+### Initialization
 
-<h2> Analysis 2 - Neural Network decision boundary </h2>
+In general, initializing all the weights to zero results in the network failing to break symmetry. This means that every neuron in each layer will learn the same thing, so you might as well be training a neural network with $n^{[l]}=1$ for every layer. This way, the network is no more powerful than a linear classifier like logistic regression. The weights $W^{[l]}$ should be initialized randomly to small values to break symmetry. Initializing weights to very large random values doesn't work well.  However, it's okay to initialize the biases $b^{[l]}$ to zeros. Symmetry is still broken so long as $W^{[l]}$ is initialized randomly. We usually initialize weights as `np.random.randn(..,..) * 0.01`. For ReLU activation, we usually use "He initialization" which is similar to "Xavier Initialization" except Xavier initialization uses a scaling factor for the weights $W^{[l]}$ of `sqrt(1./layers_dims[l-1])` whereas "He initialization" would use `sqrt(2./layers_dims[l-1])`. Different initializations lead to very different results
 
-![Guassian Data](/assets/Classification/guassian_data.jpg)
-![Logistic regression](/assets/Classification/logistic_regression_decision_boundary.jpg)
-![Neural Network](/assets/Classification/neural_nw_decision_boundary.jpg)
+- **Random Initialization**:
+    - Here is the implementation for $L=1$ (one layer neural network).  This is initializing parameters randomly.
+    ```python
+        if L == 1:
+            parameters["W" + str(L)] = np.random.randn(layer_dims[1], layer_dims[0]) * 0.01
+            parameters["b" + str(L)] = np.zeros((layer_dims[1], 1))
+    ```
 
-<h2><strong>Data Source :</strong></h2>
- <a href="https://www.kaggle.com/fayomi/advertising">Advertising dataset from Kaggle</a>
- 
-<h2><strong>Links to artifacts</strong></h2>
-<ul>
-<li><a href='https://github.com/lakshmi2688/lakshmi2688.github.io/blob/master/assets/Classification/planar_utils.py'>Utility file</a></li>
-<li><a href="https://github.com/lakshmi2688/lakshmi2688.github.io/blob/master/assets/Classification/Binary_Classification.ipynb">Source code</a></li>
-</ul>
+    - The weights $W^{[l]}$ should be initialized randomly to break symmetry. 
+    - However, it's okay to initialize the biases $b^{[l]}$ to zeros. Symmetry is still broken so long as $W^{[l]}$ is initialized randomly. To break symmetry, initialize the weights randomly. Following random initialization, each neuron can then proceed to learn a different function of its inputs
+    - Initializing weights to very large random values doesn't work well. 
+    - Initializing with small random values should do better. 
+    - When used for weight initialization, randn() helps most the weights to Avoid being close to the extremes, allocating most of them in the center of the range.
+    
 
-
+- **He Initialization**:
+    - This is named for the first author of He et al., 2015. (If you have heard of "Xavier initialization", this is similar except Xavier initialization uses a scaling factor for the weights $W^{[l]}$ of `sqrt(1./layers_dims[l-1])` where He initialization would use `sqrt(2./layers_dims[l-1])`.)
+    - You will multiply it by $\sqrt{\frac{2}{\text{dimension of the previous layer}}}$, which is what He initialization recommends for layers with a ReLU activation. 
