@@ -16,7 +16,7 @@ The  gradient descent rule is, for $l = 1, ..., L$
 
 $$\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)$$
 
-![equation](https://latex.codecogs.com/svg.image?$$W^{[l]} = W^{[l]} - \alpha \text{ } dW^{[l]} \tag{1}$$$$b^{[l]} = b^{[l]} - \alpha \text{ } db^{[l]} \tag{2}$$\)
+![equation]([https://latex.codecogs.com/svg.image?$$W^{[l]} = W^{[l]} - \alpha \text{ } dW^{[l]} \tag{1}$$$$b^{[l]} = b^{[l]} - \alpha \text{ } db^{[l]} \tag{2}$$\](https://latex.codecogs.com/svg.image?$$W%5E%7B%5Bl%5D%7D%20=%20W%5E%7B%5Bl%5D%7D%20-%20%5Calpha%20%5Ctext%7B%20%7D%20dW%5E%7B%5Bl%5D%7D%20%5Ctag%7B1%7D$$$$b%5E%7B%5Bl%5D%7D%20=%20b%5E%7B%5Bl%5D%7D%20-%20%5Calpha%20%5Ctext%7B%20%7D%20db%5E%7B%5Bl%5D%7D%20%5Ctag%7B2%7D$$))
 
 
 where L is the number of layers and $\alpha$ is the learning rate. 
