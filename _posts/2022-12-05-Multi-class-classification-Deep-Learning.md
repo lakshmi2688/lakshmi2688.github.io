@@ -17,6 +17,8 @@ The  gradient descent rule is, for
 l = 1, ..., L
 
 <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script>
+$$ {J(\theta) =\frac{1}{2m} [\sum^m_{i=1}(h_\theta(x^{(i)}) - y^{(i)})2 + \lambda\sum^n_{j=1}\theta^2_j} $$
+
 $$
 W^{[l]} = W^{[l]} - \alpha \text{ } dW^{[l]} \tag{1}
 b^{[l]} = b^{[l]} - \alpha \text{ } db^{[l]} \tag{2}
