@@ -5,19 +5,13 @@ date: 2022-12-05
 ---
 
 <h2><strong> Abstract </strong></h2>
-<p>Explore and apply Deep Learning concepts such as Optimization, Regularization to a Multi-classification problem. There are 2 parts to this analysis: </p>
-<ul><li>Build a Multilayer Neural Network in Python from scratch using various Optimization methods </li>
-<li>Implement the same using Tensorflow Deep Learning framework and compare the results</li>
-</ul>
+<p>In this exercise, we explore different initialization, optimization and regularization techniques and model a multi-classification problem using Python and Tensorflow incorporatig some of these techniques.  </p>
 
-
-<p><a name='2'></a>
     
-### 1 - (Batch) Gradient Descent
+#### 1 - (Batch) Gradient Descent
 
 A simple optimization method in machine learning is gradient descent (GD). When you take gradient steps with respect to all $m$ examples on each step, it is also called Batch Gradient Descent. 
 The  gradient descent rule is, for $l = 1, ..., L$: 
-    
 $$ W^{[l]} = W^{[l]} - \alpha \text{ } dW^{[l]} \tag{1}$$
 $$ b^{[l]} = b^{[l]} - \alpha \text{ } db^{[l]} \tag{2}$$
 
