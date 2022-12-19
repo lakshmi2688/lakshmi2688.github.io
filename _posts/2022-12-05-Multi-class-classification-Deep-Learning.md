@@ -37,7 +37,7 @@ for i in range(0, num_iterations):
         
 ```
 
-### 2 -  Stocastic Gradient Descent
+#### 2 -  Stocastic Gradient Descent
 
 A variant of Gardient Descent is Stochastic Gradient Descent (SGD), which is equivalent to mini-batch gradient descent, where each mini-batch has just 1 example. What changes is that you would be computing gradients on just one training example at a time, rather than on the whole training set. The code examples below illustrate the difference between stochastic gradient descent and (batch) gradient descent. 
 
@@ -74,8 +74,7 @@ Implementing SGD requires 3 for-loops in total:
 
 In practice, you'll often get faster results if you don't use the entire training set, or just one training example, to perform each update. 
     
-<a name='3'></a>
-### 3 - Mini-Batch Gradient Descent
+#### 3 - Mini-Batch Gradient Descent
 
 Mini-batch gradient descent uses an intermediate number of examples for each step. With mini-batch gradient descent, you loop over the mini-batches instead of looping over individual training examples.
     
@@ -119,8 +118,8 @@ There are two steps:
 <a name='ex-2'></a>
     
 
-<a name='4'></a>
-### 4 - Momentum
+
+#### 4 - Momentum
 
 Because mini-batch gradient descent makes a parameter update after seeing just a subset of examples, the direction of the update has some variance, and so the path taken by mini-batch gradient descent will "oscillate" toward convergence. Using momentum can reduce these oscillations. 
 
@@ -160,8 +159,7 @@ where L is the number of layers, $\beta$ is the momentum and $\alpha$ is the lea
 - You have to tune a momentum hyperparameter $\beta$ and a learning rate $\alpha$.
 
     
-<a name='5'></a>   
-### 5 - Adam Optimizer
+#### 5 - Adam Optimizer
 
 Adam is one of the most effective optimization algorithms for training neural networks. It combines ideas from RMSProp  and Momentum. 
 
@@ -197,18 +195,7 @@ v["db" + str(l)] = ... #(numpy array of zeros with the same shape as parameters[
 s["dW" + str(l)] = ... #(numpy array of zeros with the same shape as parameters["W" + str(l)])
 s["db" + str(l)] = ... #(numpy array of zeros with the same shape as parameters["b" + str(l)])
 
-```
-
-Implement the parameters update with Adam. Recall the general update rule is, for $l = 1, ..., L$: 
-
-$$\begin{cases}
-v_{dW^{[l]}} = \beta_1 v_{dW^{[l]}} + (1 - \beta_1) \frac{\partial \mathcal{J} }{ \partial W^{[l]} } \\
-v^{corrected}_{dW^{[l]}} = \frac{v_{dW^{[l]}}}{1 - (\beta_1)^t} \\
-s_{dW^{[l]}} = \beta_2 s_{dW^{[l]}} + (1 - \beta_2) (\frac{\partial \mathcal{J} }{\partial W^{[l]} })^2 \\
-s^{corrected}_{dW^{[l]}} = \frac{s_{dW^{[l]}}}{1 - (\beta_2)^t} \\
-W^{[l]} = W^{[l]} - \alpha \frac{v^{corrected}_{dW^{[l]}}}{\sqrt{s^{corrected}_{dW^{[l]}}} + \varepsilon}
-\end{cases}$$
-    
+```    
 </p>
 
 <h2> Input Data </h2>
