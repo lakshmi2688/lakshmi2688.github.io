@@ -15,15 +15,12 @@ A simple optimization method in machine learning is gradient descent (GD). When 
 The  gradient descent rule is, for 
 ```math
 l = 1, ..., L
-```:
 
-```math
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script>
+$$
 W^{[l]} = W^{[l]} - \alpha \text{ } dW^{[l]} \tag{1}
-```
-
-```math
 b^{[l]} = b^{[l]} - \alpha \text{ } db^{[l]} \tag{2}
-```
+$$
 
 where L is the number of layers and $\alpha$ is the learning rate. 
 
