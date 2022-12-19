@@ -252,6 +252,7 @@ It randomly shuts down some neurons in each iteration.** At each iteration, you 
     7. Apply dropout both during forward and backward propagation.
 
         
+        
 <h2> Input Data </h2>
     
 ![Input Data](/assets/Multi-class-classification/Images/Input_Data_HandSigns.jpg)
