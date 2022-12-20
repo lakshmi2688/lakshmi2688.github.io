@@ -7,9 +7,9 @@ date: 2022-12-05
 <h2><strong> Abstract </strong></h2>
 <p>In this exercise, we explore different initialization, optimization and regularization techniques and model a multi-classification problem using Python and Tensorflow incorporatig some of these techniques.  </p>
 
-## Optimization Methods
+# Optimization Methods
 
-### 1 - (Batch) Gradient Descent
+## 1 - (Batch) Gradient Descent
 
 A simple optimization method in machine learning is gradient descent (GD). When you take gradient steps with respect to all $m$ examples on each step, it is also called Batch Gradient Descent. 
 The  gradient descent rule is, for $l = 1, ..., L$: 
@@ -40,7 +40,7 @@ for i in range(0, num_iterations):
         
 ```
 
-### 2 -  Stocastic Gradient Descent
+## 2 -  Stocastic Gradient Descent
 
 A variant of Gardient Descent is Stochastic Gradient Descent (SGD), which is equivalent to mini-batch gradient descent, where each mini-batch has just 1 example. What changes is that you would be computing gradients on just one training example at a time, rather than on the whole training set. The code examples below illustrate the difference between stochastic gradient descent and (batch) gradient descent. 
 
@@ -87,7 +87,7 @@ Implementing SGD requires 3 for-loops in total:
 In practice, you'll often get faster results if you don't use the entire training set, or just one training example, to perform each update.    
     
     
-### 3 - Mini-Batch Gradient Descent
+## 3 - Mini-Batch Gradient Descent
 
 Mini-batch gradient descent uses an intermediate number of examples for each step. With mini-batch gradient descent, you loop over the mini-batches instead of looping over individual training examples.
     
@@ -114,7 +114,7 @@ for i in range(0, num_epochs):
     cost_avg = cost_total / m
 ```
 
-<img src="/assets/Multi-class-classification/Images/kiank_minibatch.png" style="width:750px;height:250px;">
+<center> <img src="/assets/Multi-class-classification/Images/kiank_minibatch.png" style="width:750px;height:250px;"></center> 
 
 
 <caption>
@@ -142,7 +142,7 @@ There are two steps:
     
 
 
-### 4 - Momentum
+## 4 - Momentum
 
 Because mini-batch gradient descent makes a parameter update after seeing just a subset of examples, the direction of the update has some variance, and so the path taken by mini-batch gradient descent will "oscillate" toward convergence. Using momentum can reduce these oscillations. 
 
@@ -191,11 +191,11 @@ where L is the number of layers, $\beta$ is the momentum and $\alpha$ is the lea
 - You have to tune a momentum hyperparameter $\beta$ and a learning rate $\alpha$.
 
     
-### 5 - Adam Optimizer
+## 5 - Adam Optimizer
 
 Adam is one of the most effective optimization algorithms for training neural networks. It combines ideas from RMSProp  and Momentum. 
 
-#### How does Adam work?
+### How does Adam work?
 1. It calculates an exponentially weighted average of past gradients, and stores it in variables $v$ (before bias correction) and $v^{corrected}$ (with bias correction). 
 2. It calculates an exponentially weighted average of the squares of the past gradients, and  stores it in variables $s$ (before bias correction) and $s^{corrected}$ (with bias correction). 
 3. It updates parameters in a direction based on combining information from "1" and "2".
@@ -230,11 +230,11 @@ s["db" + str(l)] = ... #(numpy array of zeros with the same shape as parameters[
 ```    
 </p>
     
-## Initialization
+# Initialization
 
 In general, initializing all the weights to zero results in the network failing to break symmetry. This means that every neuron in each layer will learn the same thing, so you might as well be training a neural network with $n^{[l]}=1$ for every layer. This way, the network is no more powerful than a linear classifier like logistic regression. The weights $W^{[l]}$ should be initialized randomly to small values to break symmetry. Initializing weights to very large random values doesn't work well.  However, it's okay to initialize the biases $b^{[l]}$ to zeros. Symmetry is still broken so long as $W^{[l]}$ is initialized randomly. We usually initialize weights as `np.random.randn(..,..) * 0.01`. For ReLU activation, we usually use "He initialization" which is similar to "Xavier Initialization" except Xavier initialization uses a scaling factor for the weights $W^{[l]}$ of `sqrt(1./layers_dims[l-1])` whereas "He initialization" would use `sqrt(2./layers_dims[l-1])`. Different initializations lead to very different results.
 
-### 1 - Random Initialization:
+## 1 - Random Initialization:
     - Here is the implementation for $L=1$ (one layer neural network).  This is initializing parameters randomly.
     
     ```python
@@ -250,7 +250,7 @@ In general, initializing all the weights to zero results in the network failing 
     - When used for weight initialization, randn() helps most the weights to Avoid being close to the extremes, allocating most of them in the center of the range.
     
 
-### 2 - He Initialization:
+## 2 - He Initialization:
     - This is named for the first author of He et al., 2015. (If you have heard of "Xavier initialization", this is similar except Xavier initialization uses a scaling factor for the weights $W^{[l]}$ of `sqrt(1./layers_dims[l-1])` where He initialization would use `sqrt(2./layers_dims[l-1])`.)
     - You will multiply it by $\sqrt{\frac{2}{\text{dimension of the previous layer}}}$, which is what He initialization recommends for layers with a ReLU activation. 
 
