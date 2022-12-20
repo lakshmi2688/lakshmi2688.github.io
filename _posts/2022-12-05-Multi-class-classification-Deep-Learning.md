@@ -191,9 +191,9 @@ where L is the number of layers, $\beta$ is the momentum and $\alpha$ is the lea
 Adam is one of the most effective optimization algorithms for training neural networks. It combines ideas from RMSProp  and Momentum. 
 
 ### How does Adam work?
-    - It calculates an exponentially weighted average of past gradients, and stores it in variables $v$ (before bias correction) and $v^{corrected}$ (with bias correction). 
-    - It calculates an exponentially weighted average of the squares of the past gradients, and  stores it in variables $s$ (before bias correction) and $s^{corrected}$ (with bias correction). 
-    - It updates parameters in a direction based on combining information from "1" and "2".
+- It calculates an exponentially weighted average of past gradients, and stores it in variables $v$ (before bias correction) and $v^{corrected}$ (with bias correction). 
+- It calculates an exponentially weighted average of the squares of the past gradients, and  stores it in variables $s$ (before bias correction) and $s^{corrected}$ (with bias correction). 
+- It updates parameters in a direction based on combining information from "1" and "2".
 
 The update rule is, for $l = 1, ..., L$: 
 
