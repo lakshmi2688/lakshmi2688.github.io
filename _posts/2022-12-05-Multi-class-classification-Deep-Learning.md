@@ -158,6 +158,7 @@ Momentum takes into account the past gradients to smooth out the update. The 'di
 
     
 The velocity, $v$, is a python dictionary that needs to be initialized with arrays of zeros. Its keys are the same as those in the `grads` dictionary, that is:
+
 for $l =1,...,L$:
 ```python
 v["dW" + str(l)] = ... #(numpy array of zeros with the same shape as parameters["W" + str(l)])
@@ -213,6 +214,7 @@ where:
 - $\varepsilon$ is a very small number to avoid dividing by zero
 
 Initialize the Adam variables $v, s$ which keep track of the past information.The variables $v, s$ are python dictionaries that need to be initialized with arrays of zeros. Their keys are the same as for `grads`, that is:
+
 for $l = 1, ..., L$:
     
 ```python
@@ -265,7 +267,7 @@ It randomly shuts down some neurons in each iteration.** At each iteration, you 
 
 In dropout, each neuron/unit will be more motivated to spread out its weights to each of its inputs. This will tend to have an effect of shrinking the squared norm of the weights, similar to L2 regularization. We can also vary keep prob for each layer. Keep prob=1 means we wont drop any unit. Generally we use a very high keep prob for a layer that has lot of hidden units.
 
-- Create a random matrix $D^{[1]}$ = [ $d^{[1](1)}$ $d^{[1](2)}$ ... $d^{[1](m)}$ ] of the same dimension as $A^{[1]}$.
+- Create a random matrix $D^{[1]}$ = [ $d^{[1](1)}$  $d^{[1](2)}$ ... $d^{[1](m)}$ ] of the same dimension as $A^{[1]}$.
 - Set each entry of $D^{[1]}$ to be 1 with probability (`keep_prob`), and 0 otherwise. Let's say that keep_prob = 0.8, which means that we want to keep about 80% of the neurons and drop out about 20% of them.  We want to generate a vector that has 1's and 0's, where about 80% of them are 1 and about 20% are 0.The expression `X = (X < keep_prob).astype(int)` works with multi-dimensional arrays, and the resulting output preserves the dimensions of the input array.
 - Set $A^{[1]}$ to $A^{[1]} * D^{[1]}$. (You are shutting down some neurons). You can think of $D^{[1]}$ as a mask, so that when it is multiplied with another matrix, it shuts down some of the values.
 - Divide $A^{[1]}$ by `keep_prob`. We do this to assure cost will still have the same expected value as without drop-out and to keep the same expected value for the activations. This technique is also called inverted dropout.For example, if keep_prob is 0.5, then we will on average shut down half the nodes, so the output will be scaled by 0.5 since only the remaining half are contributing to the solution. Dividing by 0.5 is equivalent to multiplying by 2. Hence, the output now has the same expected value. You can check that this works even when keep_prob is other values than 0.5.  
