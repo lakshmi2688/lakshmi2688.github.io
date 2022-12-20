@@ -7,7 +7,7 @@ date: 2022-12-05
 <h2><strong> Abstract </strong></h2>
 <p>In this exercise, we explore different initialization, optimization and regularization techniques and model a multi-classification problem using Python and Tensorflow incorporatig some of these techniques.  </p>
 
-# Optimization Methods
+## Optimization Methods
 
 ## 1 - (Batch) Gradient Descent
 
@@ -80,9 +80,9 @@ In Stochastic Gradient Descent, you use only 1 training example before updating 
 
  
 Implementing SGD requires 3 for-loops in total:
-1. Over the number of iterations
-2. Over the $m$ training examples
-3. Over the layers (to update all parameters, from $(W^{[1]},b^{[1]})$ to $(W^{[L]},b^{[L]})$ )
+- Over the number of iterations
+- Over the $m$ training examples
+- Over the layers (to update all parameters, from $(W^{[1]},b^{[1]})$ to $(W^{[L]},b^{[L]})$ )
 
 In practice, you'll often get faster results if you don't use the entire training set, or just one training example, to perform each update.    
     
@@ -230,7 +230,7 @@ s["db" + str(l)] = ... #(numpy array of zeros with the same shape as parameters[
 ```    
 </p>
     
-# Initialization
+## Initialization
 
 In general, initializing all the weights to zero results in the network failing to break symmetry. This means that every neuron in each layer will learn the same thing, so you might as well be training a neural network with $n^{[l]}=1$ for every layer. This way, the network is no more powerful than a linear classifier like logistic regression. The weights $W^{[l]}$ should be initialized randomly to small values to break symmetry. Initializing weights to very large random values doesn't work well.  However, it's okay to initialize the biases $b^{[l]}$ to zeros. Symmetry is still broken so long as $W^{[l]}$ is initialized randomly. We usually initialize weights as `np.random.randn(..,..) * 0.01`. For ReLU activation, we usually use "He initialization" which is similar to "Xavier Initialization" except Xavier initialization uses a scaling factor for the weights $W^{[l]}$ of `sqrt(1./layers_dims[l-1])` whereas "He initialization" would use `sqrt(2./layers_dims[l-1])`. Different initializations lead to very different results.
 
