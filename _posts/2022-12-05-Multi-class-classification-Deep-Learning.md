@@ -192,9 +192,9 @@ where L is the number of layers, $\beta$ is the momentum and $\alpha$ is the lea
 Adam is one of the most effective optimization algorithms for training neural networks. It combines ideas from RMSProp  and Momentum. 
 
 ### How does Adam work?
-1. It calculates an exponentially weighted average of past gradients, and stores it in variables $v$ (before bias correction) and $v^{corrected}$ (with bias correction). 
-2. It calculates an exponentially weighted average of the squares of the past gradients, and  stores it in variables $s$ (before bias correction) and $s^{corrected}$ (with bias correction). 
-3. It updates parameters in a direction based on combining information from "1" and "2".
+    - It calculates an exponentially weighted average of past gradients, and stores it in variables $v$ (before bias correction) and $v^{corrected}$ (with bias correction). 
+    - It calculates an exponentially weighted average of the squares of the past gradients, and  stores it in variables $s$ (before bias correction) and $s^{corrected}$ (with bias correction). 
+    - It updates parameters in a direction based on combining information from "1" and "2".
 
 The update rule is, for $l = 1, ..., L$: 
 
@@ -238,11 +238,11 @@ if L == 1:
     parameters["b" + str(L)] = np.zeros((layer_dims[1], 1))
 ```
 
-1. The weights $W^{[l]}$ should be initialized randomly to break symmetry. 
-2. However, it's okay to initialize the biases $b^{[l]}$ to zeros. Symmetry is still broken so long as $W^{[l]}$ is initialized randomly. To break symmetry, initialize the weights randomly. Following random initialization, each neuron can then proceed to learn a different function of its inputs
-3. Initializing weights to very large random values doesn't work well. 
-4. Initializing with small random values should do better. 
-5. When used for weight initialization, randn() helps most the weights to Avoid being close to the extremes, allocating most of them in the center of the range.
+    - The weights $W^{[l]}$ should be initialized randomly to break symmetry. 
+    - However, it's okay to initialize the biases $b^{[l]}$ to zeros. Symmetry is still broken so long as $W^{[l]}$ is initialized randomly. To break symmetry, initialize the weights randomly. Following random initialization, each neuron can then proceed to learn a different function of its inputs
+    - Initializing weights to very large random values doesn't work well. 
+    - Initializing with small random values should do better. 
+    - When used for weight initialization, randn() helps most the weights to Avoid being close to the extremes, allocating most of them in the center of the range.
     
 
 ### 2 - He Initialization:
@@ -266,13 +266,13 @@ It randomly shuts down some neurons in each iteration.** At each iteration, you 
 
 In dropout, each neuron/unit will be more motivated to spread out its weights to each of its inputs. This will tend to have an effect of shrinking the squared norm of the weights, similar to L2 regularization. We can also vary keep prob for each layer. Keep prob=1 means we wont drop any unit. Generally we use a very high keep prob for a layer that has lot of hidden units.
 
-1. Create a random matrix $D^{[1]} = [d^{[1](1)} d^{[1](2)} ... d^{[1](m)}] $ of the same dimension as $A^{[1]}$.
-2. Set each entry of $D^{[1]}$ to be 1 with probability (`keep_prob`), and 0 otherwise. Let's say that keep_prob = 0.8, which means that we want to keep about 80% of the neurons and drop out about 20% of them.  We want to generate a vector that has 1's and 0's, where about 80% of them are 1 and about 20% are 0.The expression `X = (X < keep_prob).astype(int)` works with multi-dimensional arrays, and the resulting output preserves the dimensions of the input array.
-3. Set $A^{[1]}$ to $A^{[1]} * D^{[1]}$. (You are shutting down some neurons). You can think of $D^{[1]}$ as a mask, so that when it is multiplied with another matrix, it shuts down some of the values.
-4. Divide $A^{[1]}$ by `keep_prob`. We do this to assure cost will still have the same expected value as without drop-out and to keep the same expected value for the activations. This technique is also called inverted dropout.For example, if keep_prob is 0.5, then we will on average shut down half the nodes, so the output will be scaled by 0.5 since only the remaining half are contributing to the solution. Dividing by 0.5 is equivalent to multiplying by 2. Hence, the output now has the same expected value. You can check that this works even when keep_prob is other values than 0.5.  
-5. Do not apply drop out to input or output layers. 
-6. You only use dropout during training. Don't use dropout (randomly eliminate nodes) during test time.
-7. Apply dropout both during forward and backward propagation.
+    - Create a random matrix $D^{[1]} = [d^{[1](1)} d^{[1](2)} ... d^{[1](m)}] $ of the same dimension as $A^{[1]}$.
+    - Set each entry of $D^{[1]}$ to be 1 with probability (`keep_prob`), and 0 otherwise. Let's say that keep_prob = 0.8, which means that we want to keep about 80% of the neurons and drop out about 20% of them.  We want to generate a vector that has 1's and 0's, where about 80% of them are 1 and about 20% are 0.The expression `X = (X < keep_prob).astype(int)` works with multi-dimensional arrays, and the resulting output preserves the dimensions of the input array.
+    - Set $A^{[1]}$ to $A^{[1]} * D^{[1]}$. (You are shutting down some neurons). You can think of $D^{[1]}$ as a mask, so that when it is multiplied with another matrix, it shuts down some of the values.
+    - Divide $A^{[1]}$ by `keep_prob`. We do this to assure cost will still have the same expected value as without drop-out and to keep the same expected value for the activations. This technique is also called inverted dropout.For example, if keep_prob is 0.5, then we will on average shut down half the nodes, so the output will be scaled by 0.5 since only the remaining half are contributing to the solution. Dividing by 0.5 is equivalent to multiplying by 2. Hence, the output now has the same expected value. You can check that this works even when keep_prob is other values than 0.5.  
+    - Do not apply drop out to input or output layers. 
+    - You only use dropout during training. Don't use dropout (randomly eliminate nodes) during test time.
+    - Apply dropout both during forward and backward propagation.
 
         
         
