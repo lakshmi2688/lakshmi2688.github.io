@@ -67,18 +67,16 @@ for i in range(0, num_iterations):
 
 In Stochastic Gradient Descent, you use only 1 training example before updating the gradients. When the training set is large, SGD can be faster. But the parameters will "oscillate" toward the minimum rather than converge smoothly. Here's what that looks like: 
 
-<img src="/assets/Multi-class-classification/Images/kiank_sgd.png" style="width:750px;height:250px;">
+<img src="/assets/Multi-class-classification/Images/kiank_sgd.png" style="width:750px;height:250px;" >
+
 
 <caption>
     <center> 
-        <u> <font color='purple'> <b>Figure 1</b> </u><font color='purple'>  : <b>SGD vs GD</b><br> "+" denotes a minimum of the cost. SGD leads to many oscillations to reach convergence, but each step is a lot faster to compute for SGD than it is for GD, as it uses only one training example (vs. the whole batch for GD). </center></caption>
-
-<p><ol>Implementing SGD requires 3 for-loops in total:
-<li>1. Over the number of iterations </li>
-<li>2. Over the $m$ training examples</li>
-<li>3. Over the layers (to update all parameters, from $(W^{[1]},b^{[1]})$ to $(W^{[L]},b^{[L]})$ )</li></ol></p>
-
-<p>In practice, you'll often get faster results if you don't use the entire training set, or just one training example, to perform each update.</p>
+        <font color='purple'> 
+            <b>Figure 1</b>  : <b>SGD vs GD</b><br> "+" denotes a minimum of the cost. SGD leads to many oscillations to reach convergence, but each step is a lot faster to compute for SGD than it is for GD, as it uses only one training example (vs. the whole batch for GD).
+        </font>
+    </center> 
+</caption>
  
     
     
