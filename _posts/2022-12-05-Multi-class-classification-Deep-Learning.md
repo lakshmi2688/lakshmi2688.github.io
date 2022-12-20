@@ -73,7 +73,7 @@ In Stochastic Gradient Descent, you use only 1 training example before updating 
 <caption>
     <center> 
         <font color='purple'> 
-            <b>Figure 1</b>  : <b>SGD vs GD</b><br> "+" denotes a minimum of the cost. SGD leads to many oscillations to reach convergence, but each step is a lot faster to compute for SGD than it is for GD, as it uses only one training example (vs. the whole batch for GD).
+            <b>Figure 1 : SGD vs GD</b><br> "+" denotes a minimum of the cost. SGD leads to many oscillations to reach convergence, but each step is a lot faster to compute for SGD than it is for GD, as it uses only one training example (vs. the whole batch for GD).
         </font>
     </center> 
 </caption>
