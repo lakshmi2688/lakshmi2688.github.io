@@ -9,7 +9,7 @@ date: 2022-12-05
 
 ## Optimization Methods
 
-## 1 - (Batch) Gradient Descent
+### 1 - (Batch) Gradient Descent
 
 A simple optimization method in machine learning is gradient descent (GD). When you take gradient steps with respect to all $m$ examples on each step, it is also called Batch Gradient Descent. 
 The  gradient descent rule is, for $l = 1, ..., L$: 
@@ -40,7 +40,7 @@ for i in range(0, num_iterations):
         
 ```
 
-## 2 -  Stocastic Gradient Descent
+### 2 - Stocastic Gradient Descent
 
 A variant of Gardient Descent is Stochastic Gradient Descent (SGD), which is equivalent to mini-batch gradient descent, where each mini-batch has just 1 example. What changes is that you would be computing gradients on just one training example at a time, rather than on the whole training set. The code examples below illustrate the difference between stochastic gradient descent and (batch) gradient descent. 
 
@@ -87,7 +87,7 @@ Implementing SGD requires 3 for-loops in total:
 In practice, you'll often get faster results if you don't use the entire training set, or just one training example, to perform each update.    
     
     
-## 3 - Mini-Batch Gradient Descent
+### 3 - Mini-Batch Gradient Descent
 
 Mini-batch gradient descent uses an intermediate number of examples for each step. With mini-batch gradient descent, you loop over the mini-batches instead of looping over individual training examples.
     
@@ -142,7 +142,7 @@ There are two steps:
     
 
 
-## 4 - Momentum
+### 4 - Momentum
 
 Because mini-batch gradient descent makes a parameter update after seeing just a subset of examples, the direction of the update has some variance, and so the path taken by mini-batch gradient descent will "oscillate" toward convergence. Using momentum can reduce these oscillations. 
 
@@ -191,7 +191,7 @@ where L is the number of layers, $\beta$ is the momentum and $\alpha$ is the lea
 - You have to tune a momentum hyperparameter $\beta$ and a learning rate $\alpha$.
 
     
-## 5 - Adam Optimizer
+### 5 - Adam Optimizer
 
 Adam is one of the most effective optimization algorithms for training neural networks. It combines ideas from RMSProp  and Momentum. 
 
@@ -270,16 +270,17 @@ L2-regularization relies on the assumption that a model with small weights is si
 Dropout is a widely used regularization technique that is specific to deep learning. 
 It randomly shuts down some neurons in each iteration.** At each iteration, you shut down (= set to zero) each neuron of a layer with probability  1−𝑘𝑒𝑒𝑝_𝑝𝑟𝑜𝑏  or keep it with probability  𝑘𝑒𝑒𝑝_𝑝𝑟𝑜𝑏. The dropped neurons don't contribute to the training in both the forward and backward propagations of the iteration. When you shut some neurons down, you actually modify your model. The idea behind drop-out is that at each iteration, you train a different model that uses only a subset of your neurons. With dropout, your neurons thus become less sensitive to the activation of one other specific neuron, because that other neuron might be shut down at any time.
 
-    In dropout, each neuron/unit will be more motivated to spread out its weights to each of its inputs. This will tend to have an effect of shrinking the squared norm of the weights, similar to L2 regularization. We can also vary keep prob for each layer. Keep prob=1 means we wont drop any unit. Generally we use a very high keep prob for a layer that has lot of hidden units.
-    1. Create a random matrix $D^{[1]} = [d^{[1](1)} d^{[1](2)} ... d^{[1](m)}] $ of the same dimension as $A^{[1]}$.
-    2. Set each entry of $D^{[1]}$ to be 1 with probability (`keep_prob`), and 0 otherwise.
+In dropout, each neuron/unit will be more motivated to spread out its weights to each of its inputs. This will tend to have an effect of shrinking the squared norm of the weights, similar to L2 regularization. We can also vary keep prob for each layer. Keep prob=1 means we wont drop any unit. Generally we use a very high keep prob for a layer that has lot of hidden units.
+
+    - Create a random matrix $D^{[1]} = [d^{[1](1)} d^{[1](2)} ... d^{[1](m)}] $ of the same dimension as $A^{[1]}$.
+    - Set each entry of $D^{[1]}$ to be 1 with probability (`keep_prob`), and 0 otherwise.
     Let's say that keep_prob = 0.8, which means that we want to keep about 80% of the neurons and drop out about 20% of them.  We want to generate a vector that has 1's and 0's, where about 80% of them are 1 and about 20% are 0.
     The expression `X = (X < keep_prob).astype(int)` works with multi-dimensional arrays, and the resulting output preserves the dimensions of the input array.
-    3. Set $A^{[1]}$ to $A^{[1]} * D^{[1]}$. (You are shutting down some neurons). You can think of $D^{[1]}$ as a mask, so that when it is multiplied with another matrix, it shuts down some of the values.
-    4. Divide $A^{[1]}$ by `keep_prob`. We do this to assure cost will still have the same expected value as without drop-out and to keep the same expected value for the activations. This technique is also called inverted dropout.For example, if keep_prob is 0.5, then we will on average shut down half the nodes, so the output will be scaled by 0.5 since only the remaining half are contributing to the solution. Dividing by 0.5 is equivalent to multiplying by 2. Hence, the output now has the same expected value. You can check that this works even when keep_prob is other values than 0.5.  
-    5. Do not apply drop out to input or output layers. 
-    6. You only use dropout during training. Don't use dropout (randomly eliminate nodes) during test time.
-    7. Apply dropout both during forward and backward propagation.
+    - Set $A^{[1]}$ to $A^{[1]} * D^{[1]}$. (You are shutting down some neurons). You can think of $D^{[1]}$ as a mask, so that when it is multiplied with another matrix, it shuts down some of the values.
+    - Divide $A^{[1]}$ by `keep_prob`. We do this to assure cost will still have the same expected value as without drop-out and to keep the same expected value for the activations. This technique is also called inverted dropout.For example, if keep_prob is 0.5, then we will on average shut down half the nodes, so the output will be scaled by 0.5 since only the remaining half are contributing to the solution. Dividing by 0.5 is equivalent to multiplying by 2. Hence, the output now has the same expected value. You can check that this works even when keep_prob is other values than 0.5.  
+    - Do not apply drop out to input or output layers. 
+    - You only use dropout during training. Don't use dropout (randomly eliminate nodes) during test time.
+    - Apply dropout both during forward and backward propagation.
 
         
         
