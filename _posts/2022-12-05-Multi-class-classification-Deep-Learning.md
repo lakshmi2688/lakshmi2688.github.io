@@ -148,7 +148,7 @@ Because mini-batch gradient descent makes a parameter update after seeing just a
 
 Momentum takes into account the past gradients to smooth out the update. The 'direction' of the previous gradients is stored in the variable $v$. Formally, this will be the exponentially weighted average of the gradient on previous steps. You can also think of $v$ as the "velocity" of a ball rolling downhill, building up speed (and momentum) according to the direction of the gradient/slope of the hill. 
 
-<img src="/assets/Multi-class-classification/Images/opt_momentum.png" style="width:400px;height:250px;">
+<center><img src="/assets/Multi-class-classification/Images/opt_momentum.png" style="width:400px;height:250px;"></center>
 
 
 <caption>
