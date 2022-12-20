@@ -67,7 +67,7 @@ for i in range(0, num_iterations):
 
 In Stochastic Gradient Descent, you use only 1 training example before updating the gradients. When the training set is large, SGD can be faster. But the parameters will "oscillate" toward the minimum rather than converge smoothly. Here's what that looks like: 
 
-<img src="/assets/Multi-class-classification/Images/kiank_sgd.png" style="width:750px;height:250px;" >
+<center><img src="/assets/Multi-class-classification/Images/kiank_sgd.png" style="width:750px;height:250px;" ></center> 
 
 
 <caption>
