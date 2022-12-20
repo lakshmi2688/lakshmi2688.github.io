@@ -7,6 +7,8 @@ date: 2022-12-05
 <h2><strong> Abstract </strong></h2>
 <p>In this exercise, we explore different initialization, optimization and regularization techniques and model a multi-classification problem using Python and Tensorflow incorporatig some of these techniques.  </p>
 
+<p><b>Credits:Andrew NG DeepLearning coursework</b></p>
+
 ## <font color='purple'> Optimization Methods</font>
 
 ## 1 - (Batch) Gradient Descent
