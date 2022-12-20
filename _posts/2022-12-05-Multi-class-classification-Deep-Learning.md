@@ -72,8 +72,8 @@ In Stochastic Gradient Descent, you use only 1 training example before updating 
 
 <caption>
     <center> 
-        <font color='purple'> 
-            <b>Figure 1</b>  : <b>SGD vs GD</b><br> "+" denotes a minimum of the cost. SGD leads to many oscillations to reach convergence, but each step is a lot faster to compute for SGD than it is for GD, as it uses only one training example (vs. the whole batch for GD).
+        <u><font color='purple'> 
+            <b>Figure 1</b> </u> : <b>SGD vs GD</b><br> "+" denotes a minimum of the cost. SGD leads to many oscillations to reach convergence, but each step is a lot faster to compute for SGD than it is for GD, as it uses only one training example (vs. the whole batch for GD).
         </font>
     </center> 
 </caption>
@@ -109,8 +109,8 @@ for i in range(0, num_epochs):
 
 <img src="/assets/Multi-class-classification/Images/kiank_minibatch.png" style="width:750px;height:250px;">
     
-<caption><center> <u> <font color='purple'> <b>Figure 2</b> </u>:<font color='purple'>  <b>SGD vs Mini-Batch GD</b><br> 
- "+" denotes a minimum of the cost. Using mini-batches in your optimization algorithm often leads to faster optimization. </center></caption>
+<caption><center> <u> <font color='purple'> <b>Figure 2</b> </u>: <b>SGD vs Mini-Batch GD</b><br> 
+ "+" denotes a minimum of the cost. Using mini-batches in your optimization algorithm often leads to faster optimization. </font></center></caption>
 
 There are two steps:
 - **Shuffle**: Create a shuffled version of the training set (X, Y) as shown below. Each column of X and Y represents a training example. Note that the random shuffling is done synchronously between X and Y. Such that after the shuffling the $i^{th}$ column of X is the example corresponding to the $i^{th}$ label in Y. The shuffling step ensures that examples will be split randomly into different mini-batches. 
