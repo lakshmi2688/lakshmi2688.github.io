@@ -7,9 +7,9 @@ date: 2022-12-05
 <h2><strong> Abstract </strong></h2>
 <p>In this exercise, we explore different initialization, optimization and regularization techniques and model a multi-classification problem using Python and Tensorflow incorporatig some of these techniques.  </p>
 
-### Optimization Methods
+## Optimization Methods
 
-#### 1 - (Batch) Gradient Descent
+### 1 - (Batch) Gradient Descent
 
 A simple optimization method in machine learning is gradient descent (GD). When you take gradient steps with respect to all $m$ examples on each step, it is also called Batch Gradient Descent. 
 The  gradient descent rule is, for $l = 1, ..., L$: 
@@ -40,7 +40,7 @@ for i in range(0, num_iterations):
         
 ```
 
-#### 2 -  Stocastic Gradient Descent
+### 2 -  Stocastic Gradient Descent
 
 A variant of Gardient Descent is Stochastic Gradient Descent (SGD), which is equivalent to mini-batch gradient descent, where each mini-batch has just 1 example. What changes is that you would be computing gradients on just one training example at a time, rather than on the whole training set. The code examples below illustrate the difference between stochastic gradient descent and (batch) gradient descent. 
 
@@ -73,7 +73,7 @@ In Stochastic Gradient Descent, you use only 1 training example before updating 
 <caption>
     <center> 
         <font color='purple'> 
-            <b>Figure 1 : SGD vs GD</b><br> "+" denotes a minimum of the cost. SGD leads to many oscillations to reach convergence, but each step is a lot faster to compute for SGD than it is for GD, as it uses only one training example (vs. the whole batch for GD).
+            <b>Figure 2 : SGD vs GD</b><br> "+" denotes a minimum of the cost. SGD leads to many oscillations to reach convergence, but each step is a lot faster to compute for SGD than it is for GD, as it uses only one training example (vs. the whole batch for GD).
         </font>
     </center> 
 </caption>
@@ -87,7 +87,7 @@ Implementing SGD requires 3 for-loops in total:
 In practice, you'll often get faster results if you don't use the entire training set, or just one training example, to perform each update.    
     
     
-#### 3 - Mini-Batch Gradient Descent
+### 3 - Mini-Batch Gradient Descent
 
 Mini-batch gradient descent uses an intermediate number of examples for each step. With mini-batch gradient descent, you loop over the mini-batches instead of looping over individual training examples.
     
@@ -120,7 +120,7 @@ for i in range(0, num_epochs):
 <caption>
     <center> 
         <font color='purple'> 
-            <b>Figure 1 : SGD vs GD</b><br> "+" denotes a minimum of the cost. Using mini-batches in your optimization algorithm often leads to faster optimization.
+            <b>Figure 2 : SGD vs Mini-Batch GD</b><br> "+" denotes a minimum of the cost. Using mini-batches in your optimization algorithm often leads to faster optimization.
         </font>
     </center> 
 </caption>
@@ -142,7 +142,7 @@ There are two steps:
     
 
 
-#### 4 - Momentum
+### 4 - Momentum
 
 Because mini-batch gradient descent makes a parameter update after seeing just a subset of examples, the direction of the update has some variance, and so the path taken by mini-batch gradient descent will "oscillate" toward convergence. Using momentum can reduce these oscillations. 
 
@@ -191,7 +191,7 @@ where L is the number of layers, $\beta$ is the momentum and $\alpha$ is the lea
 - You have to tune a momentum hyperparameter $\beta$ and a learning rate $\alpha$.
 
     
-#### 5 - Adam Optimizer
+### 5 - Adam Optimizer
 
 Adam is one of the most effective optimization algorithms for training neural networks. It combines ideas from RMSProp  and Momentum. 
 
