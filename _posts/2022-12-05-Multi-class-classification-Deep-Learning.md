@@ -307,5 +307,5 @@ In dropout, each neuron/unit will be more motivated to spread out its weights to
 ![Tensor](/assets/Multi-class-classification/Images/MBGD_noreg_tensor.jpg)
 ![Tensor](/assets/Multi-class-classification/Images/MBGD_tensorflow_accuracy.jpg)
 
-<h2> Source Code</h2>
-<a href=></a>
+<h2>Link to source code in Github</h2> 
+<a href= "https://github.com/lakshmi2688/PCA_Images">Source code</a>
