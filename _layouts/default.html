@@ -3,7 +3,19 @@
 	<head>
 		<title>{{ page.title }}</title>
 		<link rel="stylesheet" type="text/css" href="/css/main.css">
-		<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+		<script type='text/x-mathjax-config'>
+		MathJax.Hub.Config({                  
+		tex2jax: {                  
+		inlineMath: [ ['$','$'], ["\[","\]"] ],                  
+		},                  
+		"HTML-CSS": {                  
+		linebreaks: {                  
+		automatic: true                   
+		}                  
+		}                  
+		});                  
+		</script>                  
+		<script type="text/javascript" async src = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script> 
 	</head>
 	<body>
 		<nav>
