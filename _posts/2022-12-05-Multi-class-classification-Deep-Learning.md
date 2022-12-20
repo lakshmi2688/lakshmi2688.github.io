@@ -7,9 +7,9 @@ date: 2022-12-05
 <h2><strong> Abstract </strong></h2>
 <p>In this exercise, we explore different initialization, optimization and regularization techniques and model a multi-classification problem using Python and Tensorflow incorporatig some of these techniques.  </p>
 
-## Optimization Methods
+## <font color='purple'> Optimization Methods</font>
 
-### 1 - (Batch) Gradient Descent
+## 1 - (Batch) Gradient Descent
 
 A simple optimization method in machine learning is gradient descent (GD). When you take gradient steps with respect to all $m$ examples on each step, it is also called Batch Gradient Descent. 
 The  gradient descent rule is, for $l = 1, ..., L$: 
@@ -40,7 +40,7 @@ for i in range(0, num_iterations):
         
 ```
 
-### 2 - Stocastic Gradient Descent
+## 2 - Stocastic Gradient Descent
 
 A variant of Gradient Descent is Stochastic Gradient Descent (SGD), which is equivalent to mini-batch gradient descent, where each mini-batch has just 1 example. What changes is that you would be computing gradients on just one training example at a time, rather than on the whole training set. The code examples below illustrate the difference between stochastic gradient descent and (batch) gradient descent. 
 
@@ -86,7 +86,7 @@ Implementing SGD requires 3 for-loops in total:
 In practice, you'll often get faster results if you don't use the entire training set, or just one training example, to perform each update.    
     
     
-### 3 - Mini-Batch Gradient Descent
+## 3 - Mini-Batch Gradient Descent
 
 Mini-batch gradient descent uses an intermediate number of examples for each step. With mini-batch gradient descent, you loop over the mini-batches instead of looping over individual training examples.
     
@@ -139,7 +139,7 @@ There are two steps:
 - Powers of two are often chosen to be the mini-batch size, e.g., 16, 32, 64, 128.
 <a name='ex-2'></a>
     
-### 4 - Momentum
+## 4 - Momentum
 
 Because mini-batch gradient descent makes a parameter update after seeing just a subset of examples, the direction of the update has some variance, and so the path taken by mini-batch gradient descent will "oscillate" toward convergence. Using momentum can reduce these oscillations. 
 
@@ -187,7 +187,7 @@ where L is the number of layers, $\beta$ is the momentum and $\alpha$ is the lea
 - You have to tune a momentum hyperparameter $\beta$ and a learning rate $\alpha$.
 
     
-### 5 - Adam Optimizer
+## 5 - Adam Optimizer
 Adam is one of the most effective optimization algorithms for training neural networks. It combines ideas from RMSProp  and Momentum. 
 
 ### How does Adam work?
@@ -223,7 +223,7 @@ s["db" + str(l)] = ... #(numpy array of zeros with the same shape as parameters[
 
 ```    
     
-## Initialization
+## <font color='purple'>Initialization</font>
 
 In general, initializing all the weights to zero results in the network failing to break symmetry. This means that every neuron in each layer will learn the same thing, so you might as well be training a neural network with $n^{[l]}=1$ for every layer. This way, the network is no more powerful than a linear classifier like logistic regression. The weights $W^{[l]}$ should be initialized randomly to small values to break symmetry. Initializing weights to very large random values doesn't work well.  However, it's okay to initialize the biases $b^{[l]}$ to zeros. Symmetry is still broken so long as $W^{[l]}$ is initialized randomly. We usually initialize weights as `np.random.randn(..,..) * 0.01`. For ReLU activation, we usually use "He initialization" which is similar to "Xavier Initialization" except Xavier initialization uses a scaling factor for the weights $W^{[l]}$ of `sqrt(1./layers_dims[l-1])` whereas "He initialization" would use `sqrt(2./layers_dims[l-1])`. Different initializations lead to very different results.
 
@@ -249,7 +249,7 @@ if L == 1:
 - This is named for the first author of He et al., 2015. (If you have heard of "Xavier initialization", this is similar except Xavier initialization uses a scaling factor for the weights $W^{[l]}$ of `sqrt(1./layers_dims[l-1])` where He initialization would use `sqrt(2./layers_dims[l-1])`.)
 - You will multiply it by $\sqrt{\frac{2}{\text{dimension of the previous layer}}}$, which is what He initialization recommends for layers with a ReLU activation. 
 
-## Regularization
+## <font color='purple'>Regularization</font>
 
 If the regularization becomes very large, then dw is very large, the parameters W becomes very small, so Z will be relatively small. And so the activation function such as tanh will be relatively linear resulting in less overfitting.
 
