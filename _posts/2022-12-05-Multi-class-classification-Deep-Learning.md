@@ -235,13 +235,14 @@ s["db" + str(l)] = ... #(numpy array of zeros with the same shape as parameters[
 In general, initializing all the weights to zero results in the network failing to break symmetry. This means that every neuron in each layer will learn the same thing, so you might as well be training a neural network with $n^{[l]}=1$ for every layer. This way, the network is no more powerful than a linear classifier like logistic regression. The weights $W^{[l]}$ should be initialized randomly to small values to break symmetry. Initializing weights to very large random values doesn't work well.  However, it's okay to initialize the biases $b^{[l]}$ to zeros. Symmetry is still broken so long as $W^{[l]}$ is initialized randomly. We usually initialize weights as `np.random.randn(..,..) * 0.01`. For ReLU activation, we usually use "He initialization" which is similar to "Xavier Initialization" except Xavier initialization uses a scaling factor for the weights $W^{[l]}$ of `sqrt(1./layers_dims[l-1])` whereas "He initialization" would use `sqrt(2./layers_dims[l-1])`. Different initializations lead to very different results.
 
 ## 1 - Random Initialization:
-    - Here is the implementation for $L=1$ (one layer neural network).  This is initializing parameters randomly.
+
+Here is the implementation for $L=1$ (one layer neural network).  This is initializing parameters randomly.
     
-    ```python
-        if L == 1:
-            parameters["W" + str(L)] = np.random.randn(layer_dims[1], layer_dims[0]) * 0.01
-            parameters["b" + str(L)] = np.zeros((layer_dims[1], 1))
-    ```
+```python
+    if L == 1:
+        parameters["W" + str(L)] = np.random.randn(layer_dims[1], layer_dims[0]) * 0.01
+        parameters["b" + str(L)] = np.zeros((layer_dims[1], 1))
+```
 
     - The weights $W^{[l]}$ should be initialized randomly to break symmetry. 
     - However, it's okay to initialize the biases $b^{[l]}$ to zeros. Symmetry is still broken so long as $W^{[l]}$ is initialized randomly. To break symmetry, initialize the weights randomly. Following random initialization, each neuron can then proceed to learn a different function of its inputs
