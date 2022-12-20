@@ -273,8 +273,6 @@ In dropout, each neuron/unit will be more motivated to spread out its weights to
 - Do not apply drop out to input or output layers. 
 - You only use dropout during training. Don't use dropout (randomly eliminate nodes) during test time.
 - Apply dropout both during forward and backward propagation.
-
-        
         
 <h2> Input Data </h2>
     
