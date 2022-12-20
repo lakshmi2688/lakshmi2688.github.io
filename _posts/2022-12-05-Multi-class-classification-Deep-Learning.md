@@ -115,7 +115,7 @@ for i in range(0, num_epochs):
 
 <img src="/assets/Multi-class-classification/Images/kiank_minibatch.png" style="width:750px;height:250px;">
     
-<caption><center><font color='purple'> <b>Figure 2</b>: <b>SGD vs Mini-Batch GD</b><br> 
+<caption><center><font color='purple'> <b>Figure 2: SGD vs Mini-Batch GD </b><br> 
  "+" denotes a minimum of the cost. Using mini-batches in your optimization algorithm often leads to faster optimization. </font></center></caption>
  
  
