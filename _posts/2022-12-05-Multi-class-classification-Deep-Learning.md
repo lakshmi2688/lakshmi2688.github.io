@@ -78,6 +78,12 @@ In Stochastic Gradient Descent, you use only 1 training example before updating 
     </center> 
 </caption>
  
+Implementing SGD requires 3 for-loops in total:
+1. Over the number of iterations
+2. Over the $m$ training examples
+3. Over the layers (to update all parameters, from $(W^{[1]},b^{[1]})$ to $(W^{[L]},b^{[L]})$)
+
+In practice, you'll often get faster results if you don't use the entire training set, or just one training example, to perform each update.    
     
     
 #### 3 - Mini-Batch Gradient Descent
@@ -111,6 +117,8 @@ for i in range(0, num_epochs):
     
 <caption><center> <u> <font color='purple'> <b>Figure 2</b> </u>: <b>SGD vs Mini-Batch GD</b><br> 
  "+" denotes a minimum of the cost. Using mini-batches in your optimization algorithm often leads to faster optimization. </font></center></caption>
+ 
+ 
 
 There are two steps:
 - **Shuffle**: Create a shuffled version of the training set (X, Y) as shown below. Each column of X and Y represents a training example. Note that the random shuffling is done synchronously between X and Y. Such that after the shuffling the $i^{th}$ column of X is the example corresponding to the $i^{th}$ label in Y. The shuffling step ensures that examples will be split randomly into different mini-batches. 
