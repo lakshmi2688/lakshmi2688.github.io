@@ -73,7 +73,7 @@ In Stochastic Gradient Descent, you use only 1 training example before updating 
 <caption>
     <center> 
         <font color='purple'> 
-            <b>Figure 2 : SGD vs GD</b><br> "+" denotes a minimum of the cost. SGD leads to many oscillations to reach convergence, but each step is a lot faster to compute for SGD than it is for GD, as it uses only one training example (vs. the whole batch for GD).
+            <b>Figure 1 : SGD vs GD</b><br> "+" denotes a minimum of the cost. SGD leads to many oscillations to reach convergence, but each step is a lot faster to compute for SGD than it is for GD, as it uses only one training example (vs. the whole batch for GD).
         </font>
     </center> 
 </caption>
@@ -130,11 +130,11 @@ for i in range(0, num_epochs):
 There are two steps:
 - **Shuffle**: Create a shuffled version of the training set (X, Y) as shown below. Each column of X and Y represents a training example. Note that the random shuffling is done synchronously between X and Y. Such that after the shuffling the $i^{th}$ column of X is the example corresponding to the $i^{th}$ label in Y. The shuffling step ensures that examples will be split randomly into different mini-batches. 
 
-<img src="/assets/Multi-class-classification/Images/kiank_shuffle.png" style="width:550px;height:300px;">
+<center><img src="/assets/Multi-class-classification/Images/kiank_shuffle.png" style="width:550px;height:300px;"></center>
 
 - **Partition**: Partition the shuffled (X, Y) into mini-batches of size `mini_batch_size` (here 64). Note that the number of training examples is not always divisible by `mini_batch_size`. The last mini batch might be smaller. When the final mini-batch is smaller than the full `mini_batch_size`, it will look like this: 
 
-<img src="/assets/Multi-class-classification/Images/kiank_partition.png" style="width:550px;height:300px;">
+<center><img src="/assets/Multi-class-classification/Images/kiank_partition.png" style="width:550px;height:300px;"></center>
 
 - Shuffling and Partitioning are the two steps required to build mini-batches
 - Powers of two are often chosen to be the mini-batch size, e.g., 16, 32, 64, 128.
