@@ -77,6 +77,7 @@ In Stochastic Gradient Descent, you use only 1 training example before updating 
         </font>
     </center> 
 </caption>
+
  
 Implementing SGD requires 3 for-loops in total:
 1. Over the number of iterations
@@ -114,10 +115,16 @@ for i in range(0, num_epochs):
 ```
 
 <img src="/assets/Multi-class-classification/Images/kiank_minibatch.png" style="width:750px;height:250px;">
-    
-<caption><center><font color='purple'> <b>Figure 2: SGD vs Mini-Batch GD </b><br> 
- "+" denotes a minimum of the cost. Using mini-batches in your optimization algorithm often leads to faster optimization. </font></center></caption>
- 
+
+
+<caption>
+    <center> 
+        <font color='purple'> 
+            <b>Figure 1 : SGD vs GD</b><br> "+" denotes a minimum of the cost. Using mini-batches in your optimization algorithm often leads to faster optimization.
+        </font>
+    </center> 
+</caption>
+
  
 
 There are two steps:
@@ -142,7 +149,17 @@ Because mini-batch gradient descent makes a parameter update after seeing just a
 Momentum takes into account the past gradients to smooth out the update. The 'direction' of the previous gradients is stored in the variable $v$. Formally, this will be the exponentially weighted average of the gradient on previous steps. You can also think of $v$ as the "velocity" of a ball rolling downhill, building up speed (and momentum) according to the direction of the gradient/slope of the hill. 
 
 <img src="/assets/Multi-class-classification/Images/opt_momentum.png" style="width:400px;height:250px;">
-<caption><center> <u><font color='purple'><b>Figure 3</b> </u><font color='purple'>: The red arrows show the direction taken by one step of mini-batch gradient descent with momentum. The blue points show the direction of the gradient (with respect to the current mini-batch) on each step. Rather than just following the gradient, the gradient is allowed to influence $v$ and then take a step in the direction of $v$.<br> <font color='black'> </center>
+
+"+" denotes a minimum of the cost. Using mini-batches in your optimization algorithm often leads to faster optimization.
+
+<caption>
+    <center> 
+        <font color='purple'> 
+            <b>Figure 3 : </b><br> The red arrows show the direction taken by one step of mini-batch gradient descent with momentum. The blue points show the direction of the gradient (with respect to the current mini-batch) on each step. Rather than just following the gradient, the gradient is allowed to influence $v$ and then take a step in the direction of $v$.
+        </font>
+    </center> 
+</caption>
+
     
 The velocity, $v$, is a python dictionary that needs to be initialized with arrays of zeros. Its keys are the same as those in the `grads` dictionary, that is:
 for $l =1,...,L$:
