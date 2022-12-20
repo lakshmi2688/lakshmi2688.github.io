@@ -244,11 +244,11 @@ Here is the implementation for $L=1$ (one layer neural network).  This is initia
         parameters["b" + str(L)] = np.zeros((layer_dims[1], 1))
 ```
 
-    - The weights $W^{[l]}$ should be initialized randomly to break symmetry. 
-    - However, it's okay to initialize the biases $b^{[l]}$ to zeros. Symmetry is still broken so long as $W^{[l]}$ is initialized randomly. To break symmetry, initialize the weights randomly. Following random initialization, each neuron can then proceed to learn a different function of its inputs
-    - Initializing weights to very large random values doesn't work well. 
-    - Initializing with small random values should do better. 
-    - When used for weight initialization, randn() helps most the weights to Avoid being close to the extremes, allocating most of them in the center of the range.
+1. The weights $W^{[l]}$ should be initialized randomly to break symmetry. 
+2. However, it's okay to initialize the biases $b^{[l]}$ to zeros. Symmetry is still broken so long as $W^{[l]}$ is initialized randomly. To break symmetry, initialize the weights randomly. Following random initialization, each neuron can then proceed to learn a different function of its inputs
+3. Initializing weights to very large random values doesn't work well. 
+4. Initializing with small random values should do better. 
+5. When used for weight initialization, randn() helps most the weights to Avoid being close to the extremes, allocating most of them in the center of the range.
     
 
 ### 2 - He Initialization:
