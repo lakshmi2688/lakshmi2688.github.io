@@ -189,7 +189,6 @@ where L is the number of layers, $\beta$ is the momentum and $\alpha$ is the lea
 
     
 ### 5 - Adam Optimizer
-
 Adam is one of the most effective optimization algorithms for training neural networks. It combines ideas from RMSProp  and Momentum. 
 
 ### How does Adam work?
@@ -214,8 +213,7 @@ where:
 - $\alpha$ is the learning rate
 - $\varepsilon$ is a very small number to avoid dividing by zero
 
-Initialize the Adam variables $v, s$ which keep track of the past information.
-The variables $v, s$ are python dictionaries that need to be initialized with arrays of zeros. Their keys are the same as for `grads`, that is:
+Initialize the Adam variables $v, s$ which keep track of the past information.The variables $v, s$ are python dictionaries that need to be initialized with arrays of zeros. Their keys are the same as for `grads`, that is:
 for $l = 1, ..., L$:
     
 ```python
@@ -262,7 +260,7 @@ L2-regularization relies on the assumption that a model with small weights is si
     - The value of $\lambda$ is a hyperparameter that you can tune using a dev set.
     - L2 regularization makes your decision boundary smoother. If $\lambda$ is too large, it is also possible to "oversmooth", resulting in a model with high bias.
 
-### 2 - Dropout regularization: 
+### **2 - Dropout regularization:**
 Dropout is a widely used regularization technique that is specific to deep learning. 
 It randomly shuts down some neurons in each iteration.** At each iteration, you shut down (= set to zero) each neuron of a layer with probability  1−𝑘𝑒𝑒𝑝_𝑝𝑟𝑜𝑏  or keep it with probability  𝑘𝑒𝑒𝑝_𝑝𝑟𝑜𝑏. The dropped neurons don't contribute to the training in both the forward and backward propagations of the iteration. When you shut some neurons down, you actually modify your model. The idea behind drop-out is that at each iteration, you train a different model that uses only a subset of your neurons. With dropout, your neurons thus become less sensitive to the activation of one other specific neuron, because that other neuron might be shut down at any time.
 
