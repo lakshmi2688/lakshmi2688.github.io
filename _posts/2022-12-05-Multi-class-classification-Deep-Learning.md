@@ -9,7 +9,7 @@ date: 2022-12-05
 
 ## Optimization Methods
 
-### **1 - (Batch) Gradient Descent**
+### 1 - (Batch) Gradient Descent
 
 A simple optimization method in machine learning is gradient descent (GD). When you take gradient steps with respect to all $m$ examples on each step, it is also called Batch Gradient Descent. 
 The  gradient descent rule is, for $l = 1, ..., L$: 
@@ -42,7 +42,7 @@ for i in range(0, num_iterations):
 
 ### 2 - Stocastic Gradient Descent
 
-A variant of Gardient Descent is Stochastic Gradient Descent (SGD), which is equivalent to mini-batch gradient descent, where each mini-batch has just 1 example. What changes is that you would be computing gradients on just one training example at a time, rather than on the whole training set. The code examples below illustrate the difference between stochastic gradient descent and (batch) gradient descent. 
+A variant of Gradient Descent is Stochastic Gradient Descent (SGD), which is equivalent to mini-batch gradient descent, where each mini-batch has just 1 example. What changes is that you would be computing gradients on just one training example at a time, rather than on the whole training set. The code examples below illustrate the difference between stochastic gradient descent and (batch) gradient descent. 
 
 ```python
 X = data_input
@@ -63,7 +63,6 @@ for i in range(0, num_iterations):
     # Compute average cost
     cost_avg = cost_total / m
 ```
-
 
 In Stochastic Gradient Descent, you use only 1 training example before updating the gradients. When the training set is large, SGD can be faster. But the parameters will "oscillate" toward the minimum rather than converge smoothly. Here's what that looks like: 
 
@@ -254,14 +253,14 @@ if L == 1:
 
 If the regularization becomes very large, then dw is very large, the parameters W becomes very small, so Z will be relatively small. And so the activation function such as tanh will be relatively linear resulting in less overfitting.
 
-### **1 - L2 regularization:** 
+### 1 - L2 regularization:
 L2-regularization relies on the assumption that a model with small weights is simpler than a model with large weights. Thus, by penalizing the square values of the weights in the cost function you drive all the weights to smaller values. It becomes too costly for the cost to have large weights! This leads to a smoother model in which the output changes more slowly as the input changes. For L2 regularization, `model()` function will call: 
     - `compute_cost_with_regularization` 
     - `backward_propagation_with_regularization` 
     - The value of $\lambda$ is a hyperparameter that you can tune using a dev set.
     - L2 regularization makes your decision boundary smoother. If $\lambda$ is too large, it is also possible to "oversmooth", resulting in a model with high bias.
 
-### **2 - Dropout regularization:**
+### 2 - Dropout regularization:
 Dropout is a widely used regularization technique that is specific to deep learning. 
 It randomly shuts down some neurons in each iteration.** At each iteration, you shut down (= set to zero) each neuron of a layer with probability  1−𝑘𝑒𝑒𝑝_𝑝𝑟𝑜𝑏  or keep it with probability  𝑘𝑒𝑒𝑝_𝑝𝑟𝑜𝑏. The dropped neurons don't contribute to the training in both the forward and backward propagations of the iteration. When you shut some neurons down, you actually modify your model. The idea behind drop-out is that at each iteration, you train a different model that uses only a subset of your neurons. With dropout, your neurons thus become less sensitive to the activation of one other specific neuron, because that other neuron might be shut down at any time.
 
