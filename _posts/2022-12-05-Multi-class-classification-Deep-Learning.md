@@ -308,4 +308,4 @@ In dropout, each neuron/unit will be more motivated to spread out its weights to
 ![Tensor](/assets/Multi-class-classification/Images/MBGD_tensorflow_accuracy.jpg)
 
 <h2>Link to source code in Github</h2> 
-<a href= "https://github.com/lakshmi2688/assets/Multi-class-classification/">Source code</a>
+<a href= "https://github.com/lakshmi2688/lakshmi2688.github.io/blob/master/assets/Multi-class-classification/Hand_Digits_Classification.ipynb">Source code</a>
