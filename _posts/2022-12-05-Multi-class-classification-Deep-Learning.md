@@ -9,7 +9,7 @@ date: 2022-12-05
 
 ## Optimization Methods
 
-### 1 - **(Batch) Gradient Descent**
+### **1 - (Batch) Gradient Descent**
 
 A simple optimization method in machine learning is gradient descent (GD). When you take gradient steps with respect to all $m$ examples on each step, it is also called Batch Gradient Descent. 
 The  gradient descent rule is, for $l = 1, ..., L$: 
@@ -255,7 +255,7 @@ if L == 1:
 
 If the regularization becomes very large, then dw is very large, the parameters W becomes very small, so Z will be relatively small. And so the activation function such as tanh will be relatively linear resulting in less overfitting.
 
-### 1 - L2 regularization: 
+### **1 - L2 regularization:** 
 L2-regularization relies on the assumption that a model with small weights is simpler than a model with large weights. Thus, by penalizing the square values of the weights in the cost function you drive all the weights to smaller values. It becomes too costly for the cost to have large weights! This leads to a smoother model in which the output changes more slowly as the input changes. For L2 regularization, `model()` function will call: 
     - `compute_cost_with_regularization` 
     - `backward_propagation_with_regularization` 
