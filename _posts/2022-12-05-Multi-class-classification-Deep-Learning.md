@@ -302,4 +302,10 @@ In dropout, each neuron/unit will be more motivated to spread out its weights to
     
 ![MBGD](/assets/Multi-class-classification/Images/MBGD_noreg_adam_scheduled_decay.jpg)
 
+<h2> Model multi-classification problem using Tensorflow </h2>
+    
+![Tensor](/assets/Multi-class-classification/Images/MBGD_noreg_tensor.jpg)
+![Tensor](/assets/Multi-class-classification/Images/MBGD_tensorflow_accuracy.jpg)
 
+<h2> Source Code</h2>
+<a href=></a>
