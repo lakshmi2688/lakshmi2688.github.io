@@ -9,7 +9,7 @@ date: 2022-12-05
 
 ## Optimization Methods
 
-### 1 - (Batch) Gradient Descent
+### 1 - **(Batch) Gradient Descent**
 
 A simple optimization method in machine learning is gradient descent (GD). When you take gradient steps with respect to all $m$ examples on each step, it is also called Batch Gradient Descent. 
 The  gradient descent rule is, for $l = 1, ..., L$: 
@@ -235,9 +235,9 @@ In general, initializing all the weights to zero results in the network failing 
 Here is the implementation for $L=1$ (one layer neural network).  This is initializing parameters randomly.
     
 ```python
-    if L == 1:
-        parameters["W" + str(L)] = np.random.randn(layer_dims[1], layer_dims[0]) * 0.01
-        parameters["b" + str(L)] = np.zeros((layer_dims[1], 1))
+if L == 1:
+    parameters["W" + str(L)] = np.random.randn(layer_dims[1], layer_dims[0]) * 0.01
+    parameters["b" + str(L)] = np.zeros((layer_dims[1], 1))
 ```
 
 1. The weights $W^{[l]}$ should be initialized randomly to break symmetry. 
