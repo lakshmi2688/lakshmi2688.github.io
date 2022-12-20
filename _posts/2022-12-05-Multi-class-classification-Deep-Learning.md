@@ -69,7 +69,9 @@ In Stochastic Gradient Descent, you use only 1 training example before updating 
 
 <img src="/assets/Multi-class-classification/Images/kiank_sgd.png" style="width:750px;height:250px;">
 
-<caption><center> <u> <font color='purple'> <b>Figure 1</b> </u><font color='purple'>  : <b>SGD vs GD</b><br> "+" denotes a minimum of the cost. SGD leads to many oscillations to reach convergence, but each step is a lot faster to compute for SGD than it is for GD, as it uses only one training example (vs. the whole batch for GD). </center></caption>
+<caption>
+    <center> 
+        <u> <font color='purple'> <b>Figure 1</b> </u><font color='purple'>  : <b>SGD vs GD</b><br> "+" denotes a minimum of the cost. SGD leads to many oscillations to reach convergence, but each step is a lot faster to compute for SGD than it is for GD, as it uses only one training example (vs. the whole batch for GD). </center></caption>
 
 <p><ol>Implementing SGD requires 3 for-loops in total:
 <li>1. Over the number of iterations </li>
