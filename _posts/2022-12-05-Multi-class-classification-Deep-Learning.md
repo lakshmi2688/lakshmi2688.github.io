@@ -100,6 +100,7 @@ parameters = initialize_parameters(layers_dims)
 for i in range(0, num_epochs):
     #generate mini batches by shuffling and partitioning
     minibatches = random_mini_batches(X, Y, mini_batch_size)
+    cost_total = 0
     for minibatch in minibatches:
         #get x and y component of each minibatch
         (mini_X, mini_Y) = minibatch
