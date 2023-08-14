@@ -15,9 +15,9 @@ date: 2022-01-15
 
 <p>In PCA, we are interested in the components that maximize the variance. If one feature (e.g. human height) varies less than another (e.g. weight) because of their respective scales (meters vs. kilos), PCA might determine that the direction of maximal variance more closely corresponds with the ‘weight’ axis, if those features are not scaled. Then a change in height of one meter can be considered much more important than the change in weight of one kilogram which is clearly incorrect. </p>
    
-<p>Prior to performing PCA we should either standardize the variables to have a mean of zero and a standard deviation of 1 if features are of different scales or demean the data if features are of the same scale
+<p>Prior to performing PCA we should either standardize the variables to have a mean of zero and a standard deviation of 1 if features are of different scales or demean the data if features are of the same scale.</p>
    
-Normalization rescales the values into a range of [0,1]. This might be useful in some cases where all parameters need to have the same positive scale. Standardization rescales data to have a mean (μ) of 0 and standard deviation (σ) of 1 (unit variance).
+<p>Normalization rescales the values into a range of [0,1]. This might be useful in some cases where all parameters need to have the same positive scale. Standardization rescales data to have a mean (μ) of 0 and standard deviation (σ) of 1 (unit variance).
 
 We use the covariance matrix when the variable scales are similar and the correlation matrix when variables are on different scales. Using the correlation matrix is equivalent to standardizing each of the variables (to mean 0 and standard deviation 1). In general, PCA with and without standardizing will give different results. Especially when the scales are different.</p>
 
