@@ -43,8 +43,8 @@ We combine the data from two different API endpoints, the Legacy Pagecounts API 
 
 <h2><strong>Links to artifacts</strong></h2>
 <ul>
- <li><a href="/assets/WikiTraffic/Analysis/Wikipedia_traffic_analysis.ipynb">Source Code</a></li>
- <li><a href="/assets/WikiTraffic/Raw Data/">Raw data files</a></li>
- <li><a href="/assets/WikiTraffic/Clean Data/clean_data_en-wikipedia_traffic_200712-202009.csv">Clean data</a></li> 
- <li><a href="/assets/WikiTraffic/LICENSE">License</a></li> 
+ <li><a href="https://github.com/lakshmi2688/lakshmi2688.github.io/blob/master/assets/WikiTraffic/Analysis/Wikipedia_traffic_analysis.ipynb">Source Code</a></li>
+ <li><a href="https://github.com/lakshmi2688/lakshmi2688.github.io/blob/master//assets/WikiTraffic/Raw Data/">Raw data files</a></li>
+ <li><a href="https://github.com/lakshmi2688/lakshmi2688.github.io/blob/master//assets/WikiTraffic/Clean Data/clean_data_en-wikipedia_traffic_200712-202009.csv">Clean data</a></li> 
+ <li><a href="https://github.com/lakshmi2688/lakshmi2688.github.io/blob/master//assets/WikiTraffic/LICENSE">License</a></li> 
 </ul>
