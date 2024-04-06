@@ -17,7 +17,9 @@ date: 2022-01-15
    
 <p>Prior to performing PCA we should either standardize the variables to have a mean of zero and a standard deviation of 1 if features are of different scales or demean the data if features are of the same scale.</p>
    
-<p>Normalization rescales the values into a range of [0,1]. This might be useful in some cases where all parameters need to have the same positive scale. Standardization rescales data to have a mean (μ) of 0 and standard deviation (σ) of 1 (unit variance).
+<p>Normalization rescales the values into a range of [0,1]. This method is useful when the range of the attributes varies widely, and we want to compare them on the same scale. Normalization is also useful when we want to prevent attributes with larger values from dominating the analysis. The preprocessing.normalize() function from sklearn library is used to normalize the data. Standardization (Z-Score Normalization) rescales data to have a mean (μ) of 0 and standard deviation (σ) of 1 (unit variance). 
+   
+   
 
 We use the covariance matrix when the variable scales are similar and the correlation matrix when variables are on different scales. Using the correlation matrix is equivalent to standardizing each of the variables (to mean 0 and standard deviation 1). In general, PCA with and without standardizing will give different results. Especially when the scales are different.</p>
 
